@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - IoT
-  - Edge Computing
-  - Machine Learning
-  - Embedded Systems
   - AWS
+  - Edge Computing
+  - Embedded Systems
+  - IoT
+  - Machine Learning
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,8 +28,8 @@ apis:
     humanURL: https://aws.amazon.com/greengrass/
     baseURL: https://greengrass.amazonaws.com
     tags:
-      - IoT
       - Edge Computing
+      - IoT
       - Machine Learning
     properties:
       - type: Documentation
