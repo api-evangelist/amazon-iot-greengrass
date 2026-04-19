@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-environment-variables-structure.json",
+  "name": "LambdaEnvironmentVariables",
+  "description": "LambdaEnvironmentVariables schema",
+  "type": "object",
+  "additionalProperties": {
+    "type": "string"
+  }
+}

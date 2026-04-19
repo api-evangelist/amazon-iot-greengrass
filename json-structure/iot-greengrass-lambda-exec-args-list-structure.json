@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-exec-args-list-structure.json",
+  "name": "LambdaExecArgsList",
+  "description": "LambdaExecArgsList schema",
+  "type": "array",
+  "items": {
+    "type": "string"
+  }
+}

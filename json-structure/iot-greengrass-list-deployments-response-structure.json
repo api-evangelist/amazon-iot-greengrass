@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-list-deployments-response-structure.json",
+  "name": "ListDeploymentsResponse",
+  "description": "ListDeploymentsResponse schema",
+  "type": "object",
+  "properties": {
+    "deployments": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentList"
+        },
+        {
+          "description": "A list that summarizes each deployment."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextTokenString"
+        },
+        {
+          "description": "The token for the next set of results, or null if there are no additional results."
+        }
+      ]
+    }
+  }
+}

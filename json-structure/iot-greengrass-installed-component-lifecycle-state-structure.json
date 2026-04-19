@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-installed-component-lifecycle-state-structure.json",
+  "name": "InstalledComponentLifecycleState",
+  "description": "InstalledComponentLifecycleState schema",
+  "type": "string",
+  "enum": [
+    "NEW",
+    "INSTALLED",
+    "STARTING",
+    "RUNNING",
+    "STOPPING",
+    "ERRORED",
+    "BROKEN",
+    "FINISHED"
+  ]
+}

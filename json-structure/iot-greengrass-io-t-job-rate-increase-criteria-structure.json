@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-io-t-job-rate-increase-criteria-structure.json",
+  "name": "IoTJobRateIncreaseCriteria",
+  "description": "Contains information about criteria to meet before a job increases its rollout rate. Specify either <code>numberOfNotifiedThings</code> or <code>numberOfSucceededThings</code>.",
+  "type": "object",
+  "properties": {
+    "numberOfNotifiedThings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobNumberOfThings"
+        },
+        {
+          "description": "The number of devices to receive the job notification before the rollout rate increases."
+        }
+      ]
+    },
+    "numberOfSucceededThings": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobNumberOfThings"
+        },
+        {
+          "description": "The number of devices to successfully run the configuration job before the rollout rate increases."
+        }
+      ]
+    }
+  }
+}

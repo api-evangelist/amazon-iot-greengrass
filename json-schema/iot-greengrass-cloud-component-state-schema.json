@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-cloud-component-state-schema.json",
+  "title": "CloudComponentState",
+  "description": "CloudComponentState schema",
+  "type": "string",
+  "enum": [
+    "REQUESTED",
+    "INITIATED",
+    "DEPLOYABLE",
+    "FAILED",
+    "DEPRECATED"
+  ]
+}

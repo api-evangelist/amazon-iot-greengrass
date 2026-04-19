@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-installed-component-lifecycle-status-code-list-schema.json",
+  "title": "InstalledComponentLifecycleStatusCodeList",
+  "description": "InstalledComponentLifecycleStatusCodeList schema",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "minLength": 1,
+    "maxLength": 255
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-io-t-job-exponential-rollout-rate-structure.json",
+  "name": "IoTJobExponentialRolloutRate",
+  "description": "Contains information about an exponential rollout rate for a configuration deployment job.",
+  "type": "object",
+  "properties": {
+    "baseRatePerMinute": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobRolloutBaseRatePerMinute"
+        },
+        {
+          "description": "The minimum number of devices that receive a pending job notification, per minute, when the job starts. This parameter defines the initial rollout rate of the job."
+        }
+      ]
+    },
+    "incrementFactor": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobRolloutIncrementFactor"
+        },
+        {
+          "description": "<p>The exponential factor to increase the rollout rate for the job.</p> <p>This parameter supports up to one digit after the decimal (for example, you can specify <code>1.5</code>, but not <code>1.55</code>).</p>"
+        }
+      ]
+    },
+    "rateIncreaseCriteria": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobRateIncreaseCriteria"
+        },
+        {
+          "description": "The criteria to increase the rollout rate for the job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "baseRatePerMinute",
+    "incrementFactor",
+    "rateIncreaseCriteria"
+  ]
+}

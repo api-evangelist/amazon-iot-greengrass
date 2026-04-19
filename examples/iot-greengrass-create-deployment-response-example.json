@@ -1,0 +1,5 @@
+{
+  "deploymentId": "id-abc123",
+  "iotJobId": "id-abc123",
+  "iotJobArn": "arn:aws:iot:us-east-1:123456789012:thing/example"
+}

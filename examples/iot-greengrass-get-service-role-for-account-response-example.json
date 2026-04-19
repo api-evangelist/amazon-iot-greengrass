@@ -1,0 +1,4 @@
+{
+  "associatedAt": "example-value",
+  "roleArn": "arn:aws:iot:us-east-1:123456789012:thing/example"
+}

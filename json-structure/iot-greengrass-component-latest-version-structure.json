@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-component-latest-version-structure.json",
+  "name": "ComponentLatestVersion",
+  "description": "Contains information about the latest version of a component.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionARN"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the component version."
+        }
+      ]
+    },
+    "componentVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionString"
+        },
+        {
+          "description": "The version of the component."
+        }
+      ]
+    },
+    "creationTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the component was created, expressed in ISO 8601 format."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The description of the component version."
+        }
+      ]
+    },
+    "publisher": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The publisher of the component version."
+        }
+      ]
+    },
+    "platforms": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentPlatformList"
+        },
+        {
+          "description": "The platforms that the component version supports."
+        }
+      ]
+    }
+  }
+}

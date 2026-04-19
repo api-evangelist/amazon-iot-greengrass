@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-batch-associate-client-device-with-core-device-request-schema.json",
+  "title": "BatchAssociateClientDeviceWithCoreDeviceRequest",
+  "description": "BatchAssociateClientDeviceWithCoreDeviceRequest schema",
+  "type": "object",
+  "properties": {
+    "entries": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AssociateClientDeviceWithCoreDeviceEntryList"
+        },
+        {
+          "description": "The list of client devices to associate."
+        }
+      ]
+    }
+  }
+}

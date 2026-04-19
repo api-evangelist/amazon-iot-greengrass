@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-deployment-policies-structure.json",
+  "name": "DeploymentPolicies",
+  "description": "Contains information about policies that define how a deployment updates components and handles failure.",
+  "type": "object",
+  "properties": {
+    "failureHandlingPolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentFailureHandlingPolicy"
+        },
+        {
+          "description": "<p>The failure handling policy for the configuration deployment. This policy defines what to do if the deployment fails.</p> <p>Default: <code>ROLLBACK</code> </p>"
+        }
+      ]
+    },
+    "componentUpdatePolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentComponentUpdatePolicy"
+        },
+        {
+          "description": "The component update policy for the configuration deployment. This policy defines when it's safe to deploy the configuration to devices."
+        }
+      ]
+    },
+    "configurationValidationPolicy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentConfigurationValidationPolicy"
+        },
+        {
+          "description": "The configuration validation policy for the configuration deployment. This policy defines how long each component has to validate its configure updates."
+        }
+      ]
+    }
+  }
+}

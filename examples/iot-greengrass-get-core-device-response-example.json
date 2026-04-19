@@ -1,0 +1,9 @@
+{
+  "coreDeviceThingName": "example-resource",
+  "coreVersion": "example-value",
+  "platform": "example-value",
+  "architecture": "example-value",
+  "status": "ACTIVE",
+  "lastStatusUpdateTimestamp": "ACTIVE",
+  "tags": "example-value"
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-lambda-function-recipe-source-schema.json",
+  "title": "LambdaFunctionRecipeSource",
+  "description": "Contains information about an Lambda function to import to create a component.",
+  "type": "object",
+  "properties": {
+    "lambdaArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the Lambda function. The ARN must include the version of the function to import. You can't use version aliases like <code>$LATEST</code>."
+        }
+      ]
+    },
+    "componentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentNameString"
+        },
+        {
+          "description": "<p>The name of the component.</p> <p>Defaults to the name of the Lambda function.</p>"
+        }
+      ]
+    },
+    "componentVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionString"
+        },
+        {
+          "description": "<p>The version of the component.</p> <p>Defaults to the version of the Lambda function as a semantic version. For example, if your function version is <code>3</code>, the component version becomes <code>3.0.0</code>.</p>"
+        }
+      ]
+    },
+    "componentPlatforms": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentPlatformList"
+        },
+        {
+          "description": "The platforms that the component version supports."
+        }
+      ]
+    },
+    "componentDependencies": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentDependencyMap"
+        },
+        {
+          "description": "The component versions on which this Lambda function component depends."
+        }
+      ]
+    },
+    "componentLambdaParameters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaExecutionParameters"
+        },
+        {
+          "description": "The system and runtime parameters for the Lambda function as it runs on the Greengrass core device."
+        }
+      ]
+    }
+  },
+  "required": [
+    "lambdaArn"
+  ]
+}

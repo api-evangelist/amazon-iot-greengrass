@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-component-candidate-schema.json",
+  "title": "ComponentCandidate",
+  "description": "Contains information about a component that is a candidate to deploy to a Greengrass core device.",
+  "type": "object",
+  "properties": {
+    "componentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentNameString"
+        },
+        {
+          "description": "The name of the component."
+        }
+      ]
+    },
+    "componentVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionString"
+        },
+        {
+          "description": "The version of the component."
+        }
+      ]
+    },
+    "versionRequirements": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionRequirementMap"
+        },
+        {
+          "description": "<p>The version requirements for the component's dependencies. Greengrass core devices get the version requirements from component recipes.</p> <p>IoT Greengrass V2 uses semantic version constraints. For more information, see <a href=\"https://semver.org/\">Semantic Versioning</a>.</p>"
+        }
+      ]
+    }
+  }
+}

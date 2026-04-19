@@ -1,0 +1,6 @@
+{
+  "memorySizeInKB": "example-value",
+  "mountROSysfs": "example-value",
+  "volumes": "example-value",
+  "devices": "example-value"
+}

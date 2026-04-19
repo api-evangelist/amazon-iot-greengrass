@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-io-t-job-executions-rollout-config-structure.json",
+  "name": "IoTJobExecutionsRolloutConfig",
+  "description": "Contains information about the rollout configuration for a job. This configuration defines the rate at which the job deploys a configuration to a fleet of target devices.",
+  "type": "object",
+  "properties": {
+    "exponentialRate": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobExponentialRolloutRate"
+        },
+        {
+          "description": "The exponential rate to increase the job rollout rate."
+        }
+      ]
+    },
+    "maximumPerMinute": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobMaxExecutionsPerMin"
+        },
+        {
+          "description": "The maximum number of devices that receive a pending job notification, per minute."
+        }
+      ]
+    }
+  }
+}

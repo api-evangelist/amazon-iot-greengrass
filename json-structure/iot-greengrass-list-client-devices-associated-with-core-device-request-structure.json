@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-list-client-devices-associated-with-core-device-request-structure.json",
+  "name": "ListClientDevicesAssociatedWithCoreDeviceRequest",
+  "description": "ListClientDevicesAssociatedWithCoreDeviceRequest schema",
+  "type": "object",
+  "properties": {}
+}

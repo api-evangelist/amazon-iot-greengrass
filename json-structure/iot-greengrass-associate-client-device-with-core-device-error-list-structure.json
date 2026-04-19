@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-associate-client-device-with-core-device-error-list-structure.json",
+  "name": "AssociateClientDeviceWithCoreDeviceErrorList",
+  "description": "AssociateClientDeviceWithCoreDeviceErrorList schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "thingName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IoTThingName"
+          },
+          {
+            "description": "The name of the IoT thing whose associate request failed."
+          }
+        ]
+      },
+      "code": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NonEmptyString"
+          },
+          {
+            "description": "The error code for the request."
+          }
+        ]
+      },
+      "message": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NonEmptyString"
+          },
+          {
+            "description": "A message that provides additional information about the error."
+          }
+        ]
+      }
+    },
+    "description": "Contains an error that occurs from a request to associate a client device with a core device. The <a href=\"https://docs.aws.amazon.com/greengrass/v2/APIReference/API_BatchAssociateClientDeviceWithCoreDevice.html\">BatchAssociateClientDeviceWithCoreDevice</a> operation returns a list of these errors."
+  }
+}

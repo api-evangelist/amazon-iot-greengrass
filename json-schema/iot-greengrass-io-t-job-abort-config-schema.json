@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-io-t-job-abort-config-schema.json",
+  "title": "IoTJobAbortConfig",
+  "description": "Contains a list of criteria that define when and how to cancel a configuration deployment.",
+  "type": "object",
+  "properties": {
+    "criteriaList": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobAbortCriteriaList"
+        },
+        {
+          "description": "The list of criteria that define when and how to cancel the configuration deployment."
+        }
+      ]
+    }
+  },
+  "required": [
+    "criteriaList"
+  ]
+}

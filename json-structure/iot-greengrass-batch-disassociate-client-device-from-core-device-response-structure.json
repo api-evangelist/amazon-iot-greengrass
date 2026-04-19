@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-batch-disassociate-client-device-from-core-device-response-structure.json",
+  "name": "BatchDisassociateClientDeviceFromCoreDeviceResponse",
+  "description": "BatchDisassociateClientDeviceFromCoreDeviceResponse schema",
+  "type": "object",
+  "properties": {
+    "errorEntries": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DisassociateClientDeviceFromCoreDeviceErrorList"
+        },
+        {
+          "description": "The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that failed to disassociate."
+        }
+      ]
+    }
+  }
+}

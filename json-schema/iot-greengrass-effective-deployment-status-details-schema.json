@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-effective-deployment-status-details-schema.json",
+  "title": "EffectiveDeploymentStatusDetails",
+  "description": "<p>Contains all error-related information for the deployment record. The status details will be null if the deployment is in a success state.</p> <note> <p>Greengrass nucleus v2.8.0 or later is required to get an accurate <code>errorStack</code> and <code>errorTypes</code> response. This field will not be returned for earlier Greengrass nucleus versions.</p> </note>",
+  "type": "object",
+  "properties": {
+    "errorStack": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EffectiveDeploymentErrorStack"
+        },
+        {
+          "description": "Contains an ordered list of short error codes that range from the most generic error to the most specific one. The error codes describe the reason for failure whenever the <code>coreDeviceExecutionStatus</code> is in a failed state. The response will be an empty list if there is no error."
+        }
+      ]
+    },
+    "errorTypes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EffectiveDeploymentErrorTypeList"
+        },
+        {
+          "description": "Contains tags which describe the error. You can use the error types to classify errors to assist with remediating the failure. The response will be an empty list if there is no error."
+        }
+      ]
+    }
+  }
+}

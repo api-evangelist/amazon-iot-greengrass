@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-get-core-device-response-structure.json",
+  "name": "GetCoreDeviceResponse",
+  "description": "GetCoreDeviceResponse schema",
+  "type": "object",
+  "properties": {
+    "coreDeviceThingName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoreDeviceThingName"
+        },
+        {
+          "description": "The name of the core device. This is also the name of the IoT thing."
+        }
+      ]
+    },
+    "coreVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GGCVersion"
+        },
+        {
+          "description": "The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to the version of the Greengrass nucleus component that runs on the core device. For more information, see the <a href=\"https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html\">Greengrass nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>."
+        }
+      ]
+    },
+    "platform": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoreDevicePlatformString"
+        },
+        {
+          "description": "The operating system platform that the core device runs."
+        }
+      ]
+    },
+    "architecture": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoreDeviceArchitectureString"
+        },
+        {
+          "description": "The computer architecture of the core device."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoreDeviceStatus"
+        },
+        {
+          "description": "<p>The status of the core device. The core device status can be:</p> <ul> <li> <p> <code>HEALTHY</code> \u2013 The IoT Greengrass Core software and all components run on the core device without issue.</p> </li> <li> <p> <code>UNHEALTHY</code> \u2013 The IoT Greengrass Core software or a component is in a failed state on the core device.</p> </li> </ul>"
+        }
+      ]
+    },
+    "lastStatusUpdateTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the core device's status last updated, expressed in ISO 8601 format."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A list of key-value pairs that contain metadata for the resource. For more information, see <a href=\"https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html\">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>."
+        }
+      ]
+    }
+  }
+}

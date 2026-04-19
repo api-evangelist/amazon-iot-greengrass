@@ -1,0 +1,10 @@
+{
+  "targetArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "deploymentName": "example-resource",
+  "components": "example-value",
+  "iotJobConfiguration": "example-value",
+  "deploymentPolicies": "example-value",
+  "parentTargetArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "tags": "example-value",
+  "clientToken": "example-value"
+}

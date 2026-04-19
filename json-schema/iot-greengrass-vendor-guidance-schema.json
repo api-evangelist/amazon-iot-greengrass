@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-vendor-guidance-schema.json",
+  "title": "VendorGuidance",
+  "description": "VendorGuidance schema",
+  "type": "string",
+  "enum": [
+    "ACTIVE",
+    "DISCONTINUED",
+    "DELETED"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-isolation-mode-structure.json",
+  "name": "LambdaIsolationMode",
+  "description": "LambdaIsolationMode schema",
+  "type": "string",
+  "enum": [
+    "GreengrassContainer",
+    "NoContainer"
+  ]
+}

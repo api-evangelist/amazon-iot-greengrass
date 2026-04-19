@@ -1,0 +1,8 @@
+{
+  "arn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "componentName": "example-resource",
+  "componentVersion": "example-value",
+  "recipe": "example-value",
+  "vendorGuidance": "id-abc123",
+  "message": "example-value"
+}

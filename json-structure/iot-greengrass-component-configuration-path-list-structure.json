@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-component-configuration-path-list-structure.json",
+  "name": "ComponentConfigurationPathList",
+  "description": "ComponentConfigurationPathList schema",
+  "type": "array",
+  "items": {
+    "type": "string",
+    "minLength": 0,
+    "maxLength": 256
+  }
+}

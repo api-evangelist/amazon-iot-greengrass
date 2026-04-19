@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-list-installed-components-response-structure.json",
+  "name": "ListInstalledComponentsResponse",
+  "description": "ListInstalledComponentsResponse schema",
+  "type": "object",
+  "properties": {
+    "installedComponents": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/InstalledComponentList"
+        },
+        {
+          "description": "<p>A list that summarizes each component on the core device.</p> <note> <p>Greengrass nucleus v2.7.0 or later is required to get an accurate <code>lastStatusChangeTimestamp</code> response. This response can be inaccurate in earlier Greengrass nucleus versions.</p> </note> <note> <p>Greengrass nucleus v2.8.0 or later is required to get an accurate <code>lastInstallationSource</code> and <code>lastReportedTimestamp</code> response. This response can be inaccurate or null in earlier Greengrass nucleus versions.</p> </note>"
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextTokenString"
+        },
+        {
+          "description": "The token for the next set of results, or null if there are no additional results."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-list-component-versions-response-schema.json",
+  "title": "ListComponentVersionsResponse",
+  "description": "ListComponentVersionsResponse schema",
+  "type": "object",
+  "properties": {
+    "componentVersions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionList"
+        },
+        {
+          "description": "A list of versions that exist for the component."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextTokenString"
+        },
+        {
+          "description": "The token for the next set of results, or null if there are no additional results."
+        }
+      ]
+    }
+  }
+}

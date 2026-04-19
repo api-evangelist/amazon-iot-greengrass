@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-describe-component-response-schema.json",
+  "title": "DescribeComponentResponse",
+  "description": "DescribeComponentResponse schema",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionARN"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the component version."
+        }
+      ]
+    },
+    "componentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentNameString"
+        },
+        {
+          "description": "The name of the component."
+        }
+      ]
+    },
+    "componentVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionString"
+        },
+        {
+          "description": "The version of the component."
+        }
+      ]
+    },
+    "creationTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the component was created, expressed in ISO 8601 format."
+        }
+      ]
+    },
+    "publisher": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PublisherString"
+        },
+        {
+          "description": "The publisher of the component version."
+        }
+      ]
+    },
+    "description": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DescriptionString"
+        },
+        {
+          "description": "The description of the component version."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CloudComponentStatus"
+        },
+        {
+          "description": "The status of the component version in IoT Greengrass V2. This status is different from the status of the component on a core device."
+        }
+      ]
+    },
+    "platforms": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentPlatformList"
+        },
+        {
+          "description": "The platforms that the component version supports."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A list of key-value pairs that contain metadata for the resource. For more information, see <a href=\"https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html\">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>."
+        }
+      ]
+    }
+  }
+}

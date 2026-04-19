@@ -1,0 +1,13 @@
+{
+  "eventSources": "example-value",
+  "maxQueueSize": "example-value",
+  "maxInstancesCount": "example-value",
+  "maxIdleTimeInSeconds": "id-abc123",
+  "timeoutInSeconds": "2025-03-15T14:30:00Z",
+  "statusTimeoutInSeconds": "ACTIVE",
+  "pinned": "example-value",
+  "inputPayloadEncodingType": "example-value",
+  "execArgs": "example-value",
+  "environmentVariables": "example-value",
+  "linuxProcessParams": "example-value"
+}

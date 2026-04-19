@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-get-deployment-response-schema.json",
+  "title": "GetDeploymentResponse",
+  "description": "GetDeploymentResponse schema",
+  "type": "object",
+  "properties": {
+    "targetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetARN"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the target IoT thing or thing group."
+        }
+      ]
+    },
+    "revisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The revision number of the deployment."
+        }
+      ]
+    },
+    "deploymentId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The ID of the deployment."
+        }
+      ]
+    },
+    "deploymentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NullableString"
+        },
+        {
+          "description": "The name of the deployment."
+        }
+      ]
+    },
+    "deploymentStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentStatus"
+        },
+        {
+          "description": "The status of the deployment."
+        }
+      ]
+    },
+    "iotJobId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NullableString"
+        },
+        {
+          "description": "The ID of the IoT job that applies the deployment to target devices."
+        }
+      ]
+    },
+    "iotJobArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobARN"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the IoT job that applies the deployment to target devices."
+        }
+      ]
+    },
+    "components": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentDeploymentSpecifications"
+        },
+        {
+          "description": "The components to deploy. This is a dictionary, where each key is the name of a component, and each key's value is the version and configuration to deploy for that component."
+        }
+      ]
+    },
+    "deploymentPolicies": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentPolicies"
+        },
+        {
+          "description": "The deployment policies for the deployment. These policies define how the deployment updates components and handles failure."
+        }
+      ]
+    },
+    "iotJobConfiguration": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentIoTJobConfiguration"
+        },
+        {
+          "description": "The job configuration for the deployment configuration. The job configuration specifies the rollout, timeout, and stop configurations for the deployment configuration."
+        }
+      ]
+    },
+    "creationTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the deployment was created, expressed in ISO 8601 format."
+        }
+      ]
+    },
+    "isLatestForTarget": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IsLatestForTarget"
+        },
+        {
+          "description": "Whether or not the deployment is the latest revision for its target."
+        }
+      ]
+    },
+    "parentTargetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThingGroupARN"
+        },
+        {
+          "description": "The parent deployment's target <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> within a subdeployment."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A list of key-value pairs that contain metadata for the resource. For more information, see <a href=\"https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html\">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>."
+        }
+      ]
+    }
+  }
+}

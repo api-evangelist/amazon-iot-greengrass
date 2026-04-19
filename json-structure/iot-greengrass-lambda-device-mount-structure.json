@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-device-mount-structure.json",
+  "name": "LambdaDeviceMount",
+  "description": "Contains information about a device that Linux processes in a container can access.",
+  "type": "object",
+  "properties": {
+    "path": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FileSystemPath"
+        },
+        {
+          "description": "The mount path for the device in the file system."
+        }
+      ]
+    },
+    "permission": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaFilesystemPermission"
+        },
+        {
+          "description": "<p>The permission to access the device: read/only (<code>ro</code>) or read/write (<code>rw</code>).</p> <p>Default: <code>ro</code> </p>"
+        }
+      ]
+    },
+    "addGroupOwner": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalBoolean"
+        },
+        {
+          "description": "<p>Whether or not to add the component's system user as an owner of the device.</p> <p>Default: <code>false</code> </p>"
+        }
+      ]
+    }
+  },
+  "required": [
+    "path"
+  ]
+}

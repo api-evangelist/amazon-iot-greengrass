@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-cloud-component-status-structure.json",
+  "name": "CloudComponentStatus",
+  "description": "Contains the status of a component version in the IoT Greengrass service.",
+  "type": "object",
+  "properties": {
+    "componentState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CloudComponentState"
+        },
+        {
+          "description": "The state of the component version."
+        }
+      ]
+    },
+    "message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "A message that communicates details, such as errors, about the status of the component version."
+        }
+      ]
+    },
+    "errors": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StringMap"
+        },
+        {
+          "description": "A dictionary of errors that communicate why the component version is in an error state. For example, if IoT Greengrass can't access an artifact for the component version, then <code>errors</code> contains the artifact's URI as a key, and the error message as the value for that key."
+        }
+      ]
+    },
+    "vendorGuidance": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VendorGuidance"
+        },
+        {
+          "description": "<p>The vendor guidance state for the component version. This state indicates whether the component version has any issues that you should consider before you deploy it. The vendor guidance state can be:</p> <ul> <li> <p> <code>ACTIVE</code> \u2013 This component version is available and recommended for use.</p> </li> <li> <p> <code>DISCONTINUED</code> \u2013 This component version has been discontinued by its publisher. You can deploy this component version, but we recommend that you use a different version of this component.</p> </li> <li> <p> <code>DELETED</code> \u2013 This component version has been deleted by its publisher, so you can't deploy it. If you have any existing deployments that specify this component version, those deployments will fail.</p> </li> </ul>"
+        }
+      ]
+    },
+    "vendorGuidanceMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "A message that communicates details about the vendor guidance state of the component version. This message communicates why a component version is discontinued or deleted."
+        }
+      ]
+    }
+  }
+}

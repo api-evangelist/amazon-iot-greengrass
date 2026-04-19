@@ -1,0 +1,16 @@
+{
+  "targetArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "revisionId": "id-abc123",
+  "deploymentId": "id-abc123",
+  "deploymentName": "example-resource",
+  "deploymentStatus": "ACTIVE",
+  "iotJobId": "id-abc123",
+  "iotJobArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "components": "example-value",
+  "deploymentPolicies": "example-value",
+  "iotJobConfiguration": "example-value",
+  "creationTimestamp": "2025-03-15T14:30:00Z",
+  "isLatestForTarget": "example-value",
+  "parentTargetArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "tags": "example-value"
+}

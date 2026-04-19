@@ -1,0 +1,5 @@
+{
+  "arn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "componentName": "example-resource",
+  "latestVersion": "example-value"
+}

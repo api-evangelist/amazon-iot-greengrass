@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-resolve-component-candidates-response-schema.json",
+  "title": "ResolveComponentCandidatesResponse",
+  "description": "ResolveComponentCandidatesResponse schema",
+  "type": "object",
+  "properties": {
+    "resolvedComponentVersions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ResolvedComponentVersionsList"
+        },
+        {
+          "description": "A list of components that meet the requirements that you specify in the request. This list includes each component's recipe that you can use to install the component."
+        }
+      ]
+    }
+  }
+}

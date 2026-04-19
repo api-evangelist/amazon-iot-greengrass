@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-event-source-list-structure.json",
+  "name": "LambdaEventSourceList",
+  "description": "LambdaEventSourceList schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "topic",
+      "type"
+    ],
+    "properties": {
+      "topic": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TopicString"
+          },
+          {
+            "description": "The topic to which to subscribe to receive event messages."
+          }
+        ]
+      },
+      "type": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LambdaEventSourceType"
+          },
+          {
+            "description": "<p>The type of event source. Choose from the following options:</p> <ul> <li> <p> <code>PUB_SUB</code> \u2013 Subscribe to local publish/subscribe messages. This event source type doesn't support MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.</p> </li> <li> <p> <code>IOT_CORE</code> \u2013 Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.</p> </li> </ul>"
+          }
+        ]
+      }
+    },
+    "description": "Contains information about an event source for an Lambda function. The event source defines the topics on which this Lambda function subscribes to receive messages that run the function."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-linux-process-params-structure.json",
+  "name": "LambdaLinuxProcessParams",
+  "description": "Contains parameters for a Linux process that contains an Lambda function.",
+  "type": "object",
+  "properties": {
+    "isolationMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaIsolationMode"
+        },
+        {
+          "description": "<p>The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime environment inside the IoT Greengrass container, or as a regular process outside any container.</p> <p>Default: <code>GreengrassContainer</code> </p>"
+        }
+      ]
+    },
+    "containerParams": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaContainerParams"
+        },
+        {
+          "description": "The parameters for the container in which the Lambda function runs."
+        }
+      ]
+    }
+  }
+}

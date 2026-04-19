@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-connectivity-info-structure.json",
+  "name": "ConnectivityInfo",
+  "description": "Contains information about an endpoint and port where client devices can connect to an MQTT broker on a Greengrass core device.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "Id"
+          },
+          "description": "An ID for the connectivity information."
+        }
+      ]
+    },
+    "hostAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "HostAddress"
+          },
+          "description": "The IP address or DNS address where client devices can connect to an MQTT broker on the Greengrass core device."
+        }
+      ]
+    },
+    "portNumber": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PortNumberInt"
+        },
+        {
+          "xml": {
+            "name": "PortNumber"
+          },
+          "description": "The port where the MQTT broker operates on the core device. This port is typically 8883, which is the default port for the MQTT broker component that runs on core devices."
+        }
+      ]
+    },
+    "metadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "Metadata"
+          },
+          "description": "Additional metadata to provide to client devices that connect to this core device."
+        }
+      ]
+    }
+  }
+}

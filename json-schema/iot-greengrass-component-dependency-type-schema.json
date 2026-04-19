@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-component-dependency-type-schema.json",
+  "title": "ComponentDependencyType",
+  "description": "ComponentDependencyType schema",
+  "type": "string",
+  "enum": [
+    "HARD",
+    "SOFT"
+  ]
+}

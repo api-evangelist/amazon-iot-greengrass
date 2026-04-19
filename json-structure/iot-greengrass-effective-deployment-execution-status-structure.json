@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-effective-deployment-execution-status-structure.json",
+  "name": "EffectiveDeploymentExecutionStatus",
+  "description": "EffectiveDeploymentExecutionStatus schema",
+  "type": "string",
+  "enum": [
+    "IN_PROGRESS",
+    "QUEUED",
+    "FAILED",
+    "COMPLETED",
+    "TIMED_OUT",
+    "CANCELED",
+    "REJECTED",
+    "SUCCEEDED"
+  ]
+}

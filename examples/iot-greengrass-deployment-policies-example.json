@@ -1,0 +1,5 @@
+{
+  "failureHandlingPolicy": "example-value",
+  "componentUpdatePolicy": "example-value",
+  "configurationValidationPolicy": "id-abc123"
+}

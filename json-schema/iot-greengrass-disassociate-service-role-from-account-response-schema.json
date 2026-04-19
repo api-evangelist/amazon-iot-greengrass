@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-disassociate-service-role-from-account-response-schema.json",
+  "title": "DisassociateServiceRoleFromAccountResponse",
+  "description": "DisassociateServiceRoleFromAccountResponse schema",
+  "type": "object",
+  "properties": {
+    "disassociatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "DisassociatedAt"
+          },
+          "description": "The time when the service role was disassociated from IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region."
+        }
+      ]
+    }
+  }
+}

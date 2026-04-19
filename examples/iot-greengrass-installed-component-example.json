@@ -1,0 +1,11 @@
+{
+  "componentName": "example-resource",
+  "componentVersion": "example-value",
+  "lifecycleState": "example-value",
+  "lifecycleStateDetails": "example-value",
+  "isRoot": "example-value",
+  "lastStatusChangeTimestamp": "ACTIVE",
+  "lastReportedTimestamp": "2025-03-15T14:30:00Z",
+  "lastInstallationSource": "example-value",
+  "lifecycleStatusCodes": "ACTIVE"
+}

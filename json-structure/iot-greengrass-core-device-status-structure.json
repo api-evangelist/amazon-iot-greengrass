@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-core-device-status-structure.json",
+  "name": "CoreDeviceStatus",
+  "description": "CoreDeviceStatus schema",
+  "type": "string",
+  "enum": [
+    "HEALTHY",
+    "UNHEALTHY"
+  ]
+}

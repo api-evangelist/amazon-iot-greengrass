@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-list-core-devices-response-structure.json",
+  "name": "ListCoreDevicesResponse",
+  "description": "ListCoreDevicesResponse schema",
+  "type": "object",
+  "properties": {
+    "coreDevices": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CoreDevicesList"
+        },
+        {
+          "description": "A list that summarizes each core device."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NextTokenString"
+        },
+        {
+          "description": "The token for the next set of results, or null if there are no additional results."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-component-version-requirement-map-structure.json",
+  "name": "ComponentVersionRequirementMap",
+  "description": "ComponentVersionRequirementMap schema",
+  "type": "object",
+  "additionalProperties": {
+    "type": "string",
+    "minLength": 1
+  }
+}

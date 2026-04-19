@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-component-version-list-item-structure.json",
+  "name": "ComponentVersionListItem",
+  "description": "Contains information about a component version in a list.",
+  "type": "object",
+  "properties": {
+    "componentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentNameString"
+        },
+        {
+          "description": "The name of the component."
+        }
+      ]
+    },
+    "componentVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComponentVersionString"
+        },
+        {
+          "description": "The version of the component."
+        }
+      ]
+    },
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the component version."
+        }
+      ]
+    }
+  }
+}

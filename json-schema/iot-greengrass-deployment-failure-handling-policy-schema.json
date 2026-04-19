@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-deployment-failure-handling-policy-schema.json",
+  "title": "DeploymentFailureHandlingPolicy",
+  "description": "DeploymentFailureHandlingPolicy schema",
+  "type": "string",
+  "enum": [
+    "ROLLBACK",
+    "DO_NOTHING"
+  ]
+}

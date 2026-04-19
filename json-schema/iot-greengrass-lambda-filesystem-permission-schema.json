@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-lambda-filesystem-permission-schema.json",
+  "title": "LambdaFilesystemPermission",
+  "description": "LambdaFilesystemPermission schema",
+  "type": "string",
+  "enum": [
+    "ro",
+    "rw"
+  ]
+}

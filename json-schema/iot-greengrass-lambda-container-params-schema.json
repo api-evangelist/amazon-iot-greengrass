@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-lambda-container-params-schema.json",
+  "title": "LambdaContainerParams",
+  "description": "Contains information about a container in which Lambda functions run on Greengrass core devices.",
+  "type": "object",
+  "properties": {
+    "memorySizeInKB": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "<p>The memory size of the container, expressed in kilobytes.</p> <p>Default: <code>16384</code> (16 MB)</p>"
+        }
+      ]
+    },
+    "mountROSysfs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalBoolean"
+        },
+        {
+          "description": "<p>Whether or not the container can read information from the device's <code>/sys</code> folder.</p> <p>Default: <code>false</code> </p>"
+        }
+      ]
+    },
+    "volumes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaVolumeList"
+        },
+        {
+          "description": "The list of volumes that the container can access."
+        }
+      ]
+    },
+    "devices": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaDeviceList"
+        },
+        {
+          "description": "The list of system devices that the container can access."
+        }
+      ]
+    }
+  }
+}

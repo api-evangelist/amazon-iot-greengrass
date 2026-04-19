@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-resolved-component-versions-list-structure.json",
+  "name": "ResolvedComponentVersionsList",
+  "description": "ResolvedComponentVersionsList schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "arn": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ComponentVersionARN"
+          },
+          {
+            "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the component version."
+          }
+        ]
+      },
+      "componentName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ComponentNameString"
+          },
+          {
+            "description": "The name of the component."
+          }
+        ]
+      },
+      "componentVersion": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ComponentVersionString"
+          },
+          {
+            "description": "The version of the component."
+          }
+        ]
+      },
+      "recipe": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/RecipeBlob"
+          },
+          {
+            "description": "The recipe of the component version."
+          }
+        ]
+      },
+      "vendorGuidance": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/VendorGuidance"
+          },
+          {
+            "description": "<p>The vendor guidance state for the component version. This state indicates whether the component version has any issues that you should consider before you deploy it. The vendor guidance state can be:</p> <ul> <li> <p> <code>ACTIVE</code> \u2013 This component version is available and recommended for use.</p> </li> <li> <p> <code>DISCONTINUED</code> \u2013 This component version has been discontinued by its publisher. You can deploy this component version, but we recommend that you use a different version of this component.</p> </li> <li> <p> <code>DELETED</code> \u2013 This component version has been deleted by its publisher, so you can't deploy it. If you have any existing deployments that specify this component version, those deployments will fail.</p> </li> </ul>"
+          }
+        ]
+      },
+      "message": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/NonEmptyString"
+          },
+          {
+            "description": "A message that communicates details about the vendor guidance state of the component version. This message communicates why a component version is discontinued or deleted."
+          }
+        ]
+      }
+    },
+    "description": "Contains information about a component version that is compatible to run on a Greengrass core device."
+  }
+}

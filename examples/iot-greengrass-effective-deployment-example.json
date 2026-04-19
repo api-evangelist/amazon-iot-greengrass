@@ -1,0 +1,13 @@
+{
+  "deploymentId": "id-abc123",
+  "deploymentName": "example-resource",
+  "iotJobId": "id-abc123",
+  "iotJobArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "description": "example-value",
+  "targetArn": "arn:aws:iot:us-east-1:123456789012:thing/example",
+  "coreDeviceExecutionStatus": "ACTIVE",
+  "reason": "example-value",
+  "creationTimestamp": "2025-03-15T14:30:00Z",
+  "modifiedTimestamp": "2025-03-15T14:30:00Z",
+  "statusDetails": "ACTIVE"
+}

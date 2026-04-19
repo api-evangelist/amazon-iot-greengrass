@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-io-t-job-execution-failure-type-structure.json",
+  "name": "IoTJobExecutionFailureType",
+  "description": "IoTJobExecutionFailureType schema",
+  "type": "string",
+  "enum": [
+    "FAILED",
+    "REJECTED",
+    "TIMED_OUT",
+    "ALL"
+  ]
+}

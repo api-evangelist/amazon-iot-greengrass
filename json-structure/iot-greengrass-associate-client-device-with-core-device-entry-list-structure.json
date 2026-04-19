@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-associate-client-device-with-core-device-entry-list-structure.json",
+  "name": "AssociateClientDeviceWithCoreDeviceEntryList",
+  "description": "AssociateClientDeviceWithCoreDeviceEntryList schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "thingName"
+    ],
+    "properties": {
+      "thingName": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/IoTThingName"
+          },
+          {
+            "description": "The name of the IoT thing that represents the client device to associate."
+          }
+        ]
+      }
+    },
+    "description": "Contains a request to associate a client device with a core device. The <a href=\"https://docs.aws.amazon.com/greengrass/v2/APIReference/API_BatchAssociateClientDeviceWithCoreDevice.html\">BatchAssociateClientDeviceWithCoreDevice</a> operation consumes a list of these requests."
+  }
+}

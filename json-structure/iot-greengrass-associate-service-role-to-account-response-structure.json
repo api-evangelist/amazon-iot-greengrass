@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-associate-service-role-to-account-response-structure.json",
+  "name": "AssociateServiceRoleToAccountResponse",
+  "description": "AssociateServiceRoleToAccountResponse schema",
+  "type": "object",
+  "properties": {
+    "associatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "AssociatedAt"
+          },
+          "description": "The time when the service role was associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web Services Region."
+        }
+      ]
+    }
+  }
+}

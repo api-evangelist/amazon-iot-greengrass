@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-deployment-structure.json",
+  "name": "Deployment",
+  "description": "Contains information about a deployment.",
+  "type": "object",
+  "properties": {
+    "targetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TargetARN"
+        },
+        {
+          "description": "The <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> of the target IoT thing or thing group. When creating a subdeployment, the targetARN can only be a thing group."
+        }
+      ]
+    },
+    "revisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The revision number of the deployment."
+        }
+      ]
+    },
+    "deploymentId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The ID of the deployment."
+        }
+      ]
+    },
+    "deploymentName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonEmptyString"
+        },
+        {
+          "description": "The name of the deployment."
+        }
+      ]
+    },
+    "creationTimestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Timestamp"
+        },
+        {
+          "description": "The time at which the deployment was created, expressed in ISO 8601 format."
+        }
+      ]
+    },
+    "deploymentStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentStatus"
+        },
+        {
+          "description": "The status of the deployment."
+        }
+      ]
+    },
+    "isLatestForTarget": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IsLatestForTarget"
+        },
+        {
+          "description": "Whether or not the deployment is the latest revision for its target."
+        }
+      ]
+    },
+    "parentTargetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ThingGroupARN"
+        },
+        {
+          "description": "The parent deployment's target <a href=\"https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html\">ARN</a> within a subdeployment."
+        }
+      ]
+    }
+  }
+}

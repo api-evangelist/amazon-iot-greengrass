@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-input-payload-encoding-type-structure.json",
+  "name": "LambdaInputPayloadEncodingType",
+  "description": "LambdaInputPayloadEncodingType schema",
+  "type": "string",
+  "enum": [
+    "json",
+    "binary"
+  ]
+}

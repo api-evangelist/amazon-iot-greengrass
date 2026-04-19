@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-deployment-io-t-job-configuration-schema.json",
+  "title": "DeploymentIoTJobConfiguration",
+  "description": "Contains information about an IoT job configuration.",
+  "type": "object",
+  "properties": {
+    "jobExecutionsRolloutConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobExecutionsRolloutConfig"
+        },
+        {
+          "description": "The rollout configuration for the job. This configuration defines the rate at which the job rolls out to the fleet of target devices."
+        }
+      ]
+    },
+    "abortConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobAbortConfig"
+        },
+        {
+          "description": "The stop configuration for the job. This configuration defines when and how to stop a job rollout."
+        }
+      ]
+    },
+    "timeoutConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTJobTimeoutConfig"
+        },
+        {
+          "description": "The timeout configuration for the job. This configuration defines the amount of time each device has to complete the job."
+        }
+      ]
+    }
+  }
+}

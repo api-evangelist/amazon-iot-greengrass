@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-lambda-volume-list-structure.json",
+  "name": "LambdaVolumeList",
+  "description": "LambdaVolumeList schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "sourcePath",
+      "destinationPath"
+    ],
+    "properties": {
+      "sourcePath": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/FileSystemPath"
+          },
+          {
+            "description": "The path to the physical volume in the file system."
+          }
+        ]
+      },
+      "destinationPath": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/FileSystemPath"
+          },
+          {
+            "description": "The path to the logical volume in the file system."
+          }
+        ]
+      },
+      "permission": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/LambdaFilesystemPermission"
+          },
+          {
+            "description": "<p>The permission to access the volume: read/only (<code>ro</code>) or read/write (<code>rw</code>).</p> <p>Default: <code>ro</code> </p>"
+          }
+        ]
+      },
+      "addGroupOwner": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/OptionalBoolean"
+          },
+          {
+            "description": "<p>Whether or not to add the IoT Greengrass user group as an owner of the volume.</p> <p>Default: <code>false</code> </p>"
+          }
+        ]
+      }
+    },
+    "description": "Contains information about a volume that Linux processes in a container can access. When you define a volume, the IoT Greengrass Core software mounts the source files to the destination inside the container."
+  }
+}

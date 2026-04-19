@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-get-connectivity-info-response-schema.json",
+  "title": "GetConnectivityInfoResponse",
+  "description": "GetConnectivityInfoResponse schema",
+  "type": "object",
+  "properties": {
+    "connectivityInfo": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/connectivityInfoList"
+        },
+        {
+          "xml": {
+            "name": "ConnectivityInfo"
+          },
+          "description": "The connectivity information for the core device."
+        }
+      ]
+    },
+    "message": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "Message"
+          },
+          "description": "A message about the connectivity information request."
+        }
+      ]
+    }
+  }
+}

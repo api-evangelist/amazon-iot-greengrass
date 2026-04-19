@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-io-t-job-abort-action-structure.json",
+  "name": "IoTJobAbortAction",
+  "description": "IoTJobAbortAction schema",
+  "type": "string",
+  "enum": [
+    "CANCEL"
+  ]
+}

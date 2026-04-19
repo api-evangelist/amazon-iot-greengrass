@@ -1,0 +1,643 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "amzn": "https://amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AssociateClientDeviceWithCoreDeviceEntry": "amzn:AssociateClientDeviceWithCoreDeviceEntry",
+    "AssociateClientDeviceWithCoreDeviceErrorEntry": "amzn:AssociateClientDeviceWithCoreDeviceErrorEntry",
+    "AssociateServiceRoleToAccountRequest": "amzn:AssociateServiceRoleToAccountRequest",
+    "AssociateServiceRoleToAccountResponse": "amzn:AssociateServiceRoleToAccountResponse",
+    "AssociatedClientDevice": "amzn:AssociatedClientDevice",
+    "BatchAssociateClientDeviceWithCoreDeviceRequest": "amzn:BatchAssociateClientDeviceWithCoreDeviceRequest",
+    "BatchAssociateClientDeviceWithCoreDeviceResponse": "amzn:BatchAssociateClientDeviceWithCoreDeviceResponse",
+    "BatchDisassociateClientDeviceFromCoreDeviceRequest": "amzn:BatchDisassociateClientDeviceFromCoreDeviceRequest",
+    "BatchDisassociateClientDeviceFromCoreDeviceResponse": "amzn:BatchDisassociateClientDeviceFromCoreDeviceResponse",
+    "CancelDeploymentRequest": "amzn:CancelDeploymentRequest",
+    "CancelDeploymentResponse": "amzn:CancelDeploymentResponse",
+    "CloudComponentStatus": "amzn:CloudComponentStatus",
+    "Component": "amzn:Component",
+    "ComponentCandidate": "amzn:ComponentCandidate",
+    "ComponentConfigurationUpdate": "amzn:ComponentConfigurationUpdate",
+    "ComponentDependencyMap": "amzn:ComponentDependencyMap",
+    "ComponentDependencyRequirement": "amzn:ComponentDependencyRequirement",
+    "ComponentDeploymentSpecification": "amzn:ComponentDeploymentSpecification",
+    "ComponentDeploymentSpecifications": "amzn:ComponentDeploymentSpecifications",
+    "ComponentLatestVersion": "amzn:ComponentLatestVersion",
+    "ComponentPlatform": "amzn:ComponentPlatform",
+    "ComponentRunWith": "amzn:ComponentRunWith",
+    "ComponentVersionListItem": "amzn:ComponentVersionListItem",
+    "ComponentVersionRequirementMap": "amzn:ComponentVersionRequirementMap",
+    "ConnectivityInfo": "amzn:ConnectivityInfo",
+    "CoreDevice": "amzn:CoreDevice",
+    "CreateComponentVersionRequest": "amzn:CreateComponentVersionRequest",
+    "CreateComponentVersionResponse": "amzn:CreateComponentVersionResponse",
+    "CreateDeploymentRequest": "amzn:CreateDeploymentRequest",
+    "CreateDeploymentResponse": "amzn:CreateDeploymentResponse",
+    "DeleteComponentRequest": "amzn:DeleteComponentRequest",
+    "DeleteCoreDeviceRequest": "amzn:DeleteCoreDeviceRequest",
+    "DeleteDeploymentRequest": "amzn:DeleteDeploymentRequest",
+    "Deployment": "amzn:Deployment",
+    "DeploymentComponentUpdatePolicy": "amzn:DeploymentComponentUpdatePolicy",
+    "DeploymentConfigurationValidationPolicy": "amzn:DeploymentConfigurationValidationPolicy",
+    "DeploymentIoTJobConfiguration": "amzn:DeploymentIoTJobConfiguration",
+    "DeploymentPolicies": "amzn:DeploymentPolicies",
+    "DescribeComponentRequest": "amzn:DescribeComponentRequest",
+    "DescribeComponentResponse": "amzn:DescribeComponentResponse",
+    "DisassociateClientDeviceFromCoreDeviceEntry": "amzn:DisassociateClientDeviceFromCoreDeviceEntry",
+    "DisassociateClientDeviceFromCoreDeviceErrorEntry": "amzn:DisassociateClientDeviceFromCoreDeviceErrorEntry",
+    "DisassociateServiceRoleFromAccountRequest": "amzn:DisassociateServiceRoleFromAccountRequest",
+    "DisassociateServiceRoleFromAccountResponse": "amzn:DisassociateServiceRoleFromAccountResponse",
+    "EffectiveDeployment": "amzn:EffectiveDeployment",
+    "EffectiveDeploymentStatusDetails": "amzn:EffectiveDeploymentStatusDetails",
+    "GetComponentRequest": "amzn:GetComponentRequest",
+    "GetComponentResponse": "amzn:GetComponentResponse",
+    "GetComponentVersionArtifactRequest": "amzn:GetComponentVersionArtifactRequest",
+    "GetComponentVersionArtifactResponse": "amzn:GetComponentVersionArtifactResponse",
+    "GetConnectivityInfoRequest": "amzn:GetConnectivityInfoRequest",
+    "GetConnectivityInfoResponse": "amzn:GetConnectivityInfoResponse",
+    "GetCoreDeviceRequest": "amzn:GetCoreDeviceRequest",
+    "GetCoreDeviceResponse": "amzn:GetCoreDeviceResponse",
+    "GetDeploymentRequest": "amzn:GetDeploymentRequest",
+    "GetDeploymentResponse": "amzn:GetDeploymentResponse",
+    "GetServiceRoleForAccountRequest": "amzn:GetServiceRoleForAccountRequest",
+    "GetServiceRoleForAccountResponse": "amzn:GetServiceRoleForAccountResponse",
+    "InstalledComponent": "amzn:InstalledComponent",
+    "IoTJobAbortConfig": "amzn:IoTJobAbortConfig",
+    "IoTJobAbortCriteria": "amzn:IoTJobAbortCriteria",
+    "IoTJobExecutionsRolloutConfig": "amzn:IoTJobExecutionsRolloutConfig",
+    "IoTJobExponentialRolloutRate": "amzn:IoTJobExponentialRolloutRate",
+    "IoTJobRateIncreaseCriteria": "amzn:IoTJobRateIncreaseCriteria",
+    "IoTJobTimeoutConfig": "amzn:IoTJobTimeoutConfig",
+    "LambdaContainerParams": "amzn:LambdaContainerParams",
+    "LambdaDeviceMount": "amzn:LambdaDeviceMount",
+    "LambdaEnvironmentVariables": "amzn:LambdaEnvironmentVariables",
+    "LambdaEventSource": "amzn:LambdaEventSource",
+    "LambdaExecutionParameters": "amzn:LambdaExecutionParameters",
+    "LambdaFunctionRecipeSource": "amzn:LambdaFunctionRecipeSource",
+    "LambdaLinuxProcessParams": "amzn:LambdaLinuxProcessParams",
+    "LambdaVolumeMount": "amzn:LambdaVolumeMount",
+    "ListClientDevicesAssociatedWithCoreDeviceRequest": "amzn:ListClientDevicesAssociatedWithCoreDeviceRequest",
+    "ListClientDevicesAssociatedWithCoreDeviceResponse": "amzn:ListClientDevicesAssociatedWithCoreDeviceResponse",
+    "ListComponentVersionsRequest": "amzn:ListComponentVersionsRequest",
+    "ListComponentVersionsResponse": "amzn:ListComponentVersionsResponse",
+    "ListComponentsRequest": "amzn:ListComponentsRequest",
+    "ListComponentsResponse": "amzn:ListComponentsResponse",
+    "ListCoreDevicesRequest": "amzn:ListCoreDevicesRequest",
+    "ListCoreDevicesResponse": "amzn:ListCoreDevicesResponse",
+    "ListDeploymentsRequest": "amzn:ListDeploymentsRequest",
+    "ListDeploymentsResponse": "amzn:ListDeploymentsResponse",
+    "ListEffectiveDeploymentsRequest": "amzn:ListEffectiveDeploymentsRequest",
+    "ListEffectiveDeploymentsResponse": "amzn:ListEffectiveDeploymentsResponse",
+    "ListInstalledComponentsRequest": "amzn:ListInstalledComponentsRequest",
+    "ListInstalledComponentsResponse": "amzn:ListInstalledComponentsResponse",
+    "ListTagsForResourceRequest": "amzn:ListTagsForResourceRequest",
+    "ListTagsForResourceResponse": "amzn:ListTagsForResourceResponse",
+    "PlatformAttributesMap": "amzn:PlatformAttributesMap",
+    "ResolveComponentCandidatesRequest": "amzn:ResolveComponentCandidatesRequest",
+    "ResolveComponentCandidatesResponse": "amzn:ResolveComponentCandidatesResponse",
+    "ResolvedComponentVersion": "amzn:ResolvedComponentVersion",
+    "StringMap": "amzn:StringMap",
+    "SystemResourceLimits": "amzn:SystemResourceLimits",
+    "TagMap": "amzn:TagMap",
+    "TagResourceRequest": "amzn:TagResourceRequest",
+    "TagResourceResponse": "amzn:TagResourceResponse",
+    "UntagResourceRequest": "amzn:UntagResourceRequest",
+    "UntagResourceResponse": "amzn:UntagResourceResponse",
+    "abortConfig": {
+      "@id": "amzn:abortConfig",
+      "@type": "xsd:string"
+    },
+    "action": {
+      "@id": "amzn:action",
+      "@type": "xsd:string"
+    },
+    "addGroupOwner": {
+      "@id": "amzn:addGroupOwner",
+      "@type": "xsd:string"
+    },
+    "architecture": {
+      "@id": "amzn:architecture",
+      "@type": "xsd:string"
+    },
+    "arn": {
+      "@id": "amzn:arn",
+      "@type": "xsd:string"
+    },
+    "associatedAt": {
+      "@id": "amzn:associatedAt",
+      "@type": "xsd:string"
+    },
+    "associatedClientDevices": {
+      "@id": "amzn:associatedClientDevices",
+      "@type": "xsd:string"
+    },
+    "associationTimestamp": {
+      "@id": "amzn:associationTimestamp",
+      "@type": "xsd:string"
+    },
+    "attributes": {
+      "@id": "amzn:attributes",
+      "@type": "xsd:string"
+    },
+    "baseRatePerMinute": {
+      "@id": "amzn:baseRatePerMinute",
+      "@type": "xsd:string"
+    },
+    "clientToken": {
+      "@id": "amzn:clientToken",
+      "@type": "xsd:string"
+    },
+    "code": {
+      "@id": "amzn:code",
+      "@type": "xsd:string"
+    },
+    "componentCandidates": {
+      "@id": "amzn:componentCandidates",
+      "@type": "xsd:string"
+    },
+    "componentDependencies": {
+      "@id": "amzn:componentDependencies",
+      "@type": "xsd:string"
+    },
+    "componentLambdaParameters": {
+      "@id": "amzn:componentLambdaParameters",
+      "@type": "xsd:string"
+    },
+    "componentName": {
+      "@id": "amzn:componentName",
+      "@type": "xsd:string"
+    },
+    "componentPlatforms": {
+      "@id": "amzn:componentPlatforms",
+      "@type": "xsd:string"
+    },
+    "componentState": {
+      "@id": "amzn:componentState",
+      "@type": "xsd:string"
+    },
+    "componentUpdatePolicy": {
+      "@id": "amzn:componentUpdatePolicy",
+      "@type": "xsd:string"
+    },
+    "componentVersion": {
+      "@id": "amzn:componentVersion",
+      "@type": "xsd:string"
+    },
+    "componentVersions": {
+      "@id": "amzn:componentVersions",
+      "@type": "xsd:string"
+    },
+    "components": {
+      "@id": "amzn:components",
+      "@type": "xsd:string"
+    },
+    "configurationUpdate": {
+      "@id": "amzn:configurationUpdate",
+      "@type": "xsd:string"
+    },
+    "configurationValidationPolicy": {
+      "@id": "amzn:configurationValidationPolicy",
+      "@type": "xsd:string"
+    },
+    "connectivityInfo": {
+      "@id": "amzn:connectivityInfo",
+      "@type": "xsd:string"
+    },
+    "containerParams": {
+      "@id": "amzn:containerParams",
+      "@type": "xsd:string"
+    },
+    "coreDeviceExecutionStatus": {
+      "@id": "amzn:coreDeviceExecutionStatus",
+      "@type": "xsd:string"
+    },
+    "coreDeviceThingName": {
+      "@id": "amzn:coreDeviceThingName",
+      "@type": "xsd:string"
+    },
+    "coreDevices": {
+      "@id": "amzn:coreDevices",
+      "@type": "xsd:string"
+    },
+    "coreVersion": {
+      "@id": "amzn:coreVersion",
+      "@type": "xsd:string"
+    },
+    "cpus": {
+      "@id": "amzn:cpus",
+      "@type": "xsd:string"
+    },
+    "creationTimestamp": {
+      "@id": "amzn:creationTimestamp",
+      "@type": "xsd:string"
+    },
+    "criteriaList": {
+      "@id": "amzn:criteriaList",
+      "@type": "xsd:string"
+    },
+    "dependencyType": {
+      "@id": "amzn:dependencyType",
+      "@type": "xsd:string"
+    },
+    "deploymentId": {
+      "@id": "amzn:deploymentId",
+      "@type": "xsd:string"
+    },
+    "deploymentName": {
+      "@id": "amzn:deploymentName",
+      "@type": "xsd:string"
+    },
+    "deploymentPolicies": {
+      "@id": "amzn:deploymentPolicies",
+      "@type": "xsd:string"
+    },
+    "deploymentStatus": {
+      "@id": "amzn:deploymentStatus",
+      "@type": "xsd:string"
+    },
+    "deployments": {
+      "@id": "amzn:deployments",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "destinationPath": {
+      "@id": "amzn:destinationPath",
+      "@type": "xsd:string"
+    },
+    "devices": {
+      "@id": "amzn:devices",
+      "@type": "xsd:string"
+    },
+    "disassociatedAt": {
+      "@id": "amzn:disassociatedAt",
+      "@type": "xsd:string"
+    },
+    "effectiveDeployments": {
+      "@id": "amzn:effectiveDeployments",
+      "@type": "xsd:string"
+    },
+    "entries": {
+      "@id": "amzn:entries",
+      "@type": "xsd:string"
+    },
+    "environmentVariables": {
+      "@id": "amzn:environmentVariables",
+      "@type": "xsd:string"
+    },
+    "errorEntries": {
+      "@id": "amzn:errorEntries",
+      "@type": "xsd:string"
+    },
+    "errorStack": {
+      "@id": "amzn:errorStack",
+      "@type": "xsd:string"
+    },
+    "errorTypes": {
+      "@id": "amzn:errorTypes",
+      "@type": "xsd:string"
+    },
+    "errors": {
+      "@id": "amzn:errors",
+      "@type": "xsd:string"
+    },
+    "eventSources": {
+      "@id": "amzn:eventSources",
+      "@type": "xsd:string"
+    },
+    "execArgs": {
+      "@id": "amzn:execArgs",
+      "@type": "xsd:string"
+    },
+    "exponentialRate": {
+      "@id": "amzn:exponentialRate",
+      "@type": "xsd:string"
+    },
+    "failureHandlingPolicy": {
+      "@id": "amzn:failureHandlingPolicy",
+      "@type": "xsd:string"
+    },
+    "failureType": {
+      "@id": "amzn:failureType",
+      "@type": "xsd:string"
+    },
+    "hostAddress": {
+      "@id": "amzn:hostAddress",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "amzn:id",
+      "@type": "xsd:string"
+    },
+    "inProgressTimeoutInMinutes": {
+      "@id": "amzn:inProgressTimeoutInMinutes",
+      "@type": "xsd:string"
+    },
+    "incrementFactor": {
+      "@id": "amzn:incrementFactor",
+      "@type": "xsd:string"
+    },
+    "inlineRecipe": {
+      "@id": "amzn:inlineRecipe",
+      "@type": "xsd:string"
+    },
+    "inputPayloadEncodingType": {
+      "@id": "amzn:inputPayloadEncodingType",
+      "@type": "xsd:string"
+    },
+    "installedComponents": {
+      "@id": "amzn:installedComponents",
+      "@type": "xsd:string"
+    },
+    "iotJobArn": {
+      "@id": "amzn:iotJobArn",
+      "@type": "xsd:string"
+    },
+    "iotJobConfiguration": {
+      "@id": "amzn:iotJobConfiguration",
+      "@type": "xsd:string"
+    },
+    "iotJobId": {
+      "@id": "amzn:iotJobId",
+      "@type": "xsd:string"
+    },
+    "isLatestForTarget": {
+      "@id": "amzn:isLatestForTarget",
+      "@type": "xsd:string"
+    },
+    "isRoot": {
+      "@id": "amzn:isRoot",
+      "@type": "xsd:string"
+    },
+    "isolationMode": {
+      "@id": "amzn:isolationMode",
+      "@type": "xsd:string"
+    },
+    "jobExecutionsRolloutConfig": {
+      "@id": "amzn:jobExecutionsRolloutConfig",
+      "@type": "xsd:string"
+    },
+    "lambdaArn": {
+      "@id": "amzn:lambdaArn",
+      "@type": "xsd:string"
+    },
+    "lambdaFunction": {
+      "@id": "amzn:lambdaFunction",
+      "@type": "xsd:string"
+    },
+    "lastInstallationSource": {
+      "@id": "amzn:lastInstallationSource",
+      "@type": "xsd:string"
+    },
+    "lastReportedTimestamp": {
+      "@id": "amzn:lastReportedTimestamp",
+      "@type": "xsd:string"
+    },
+    "lastStatusChangeTimestamp": {
+      "@id": "amzn:lastStatusChangeTimestamp",
+      "@type": "xsd:string"
+    },
+    "lastStatusUpdateTimestamp": {
+      "@id": "amzn:lastStatusUpdateTimestamp",
+      "@type": "xsd:string"
+    },
+    "latestVersion": {
+      "@id": "amzn:latestVersion",
+      "@type": "xsd:string"
+    },
+    "lifecycleState": {
+      "@id": "amzn:lifecycleState",
+      "@type": "xsd:string"
+    },
+    "lifecycleStateDetails": {
+      "@id": "amzn:lifecycleStateDetails",
+      "@type": "xsd:string"
+    },
+    "lifecycleStatusCodes": {
+      "@id": "amzn:lifecycleStatusCodes",
+      "@type": "xsd:string"
+    },
+    "linuxProcessParams": {
+      "@id": "amzn:linuxProcessParams",
+      "@type": "xsd:string"
+    },
+    "maxIdleTimeInSeconds": {
+      "@id": "amzn:maxIdleTimeInSeconds",
+      "@type": "xsd:string"
+    },
+    "maxInstancesCount": {
+      "@id": "amzn:maxInstancesCount",
+      "@type": "xsd:string"
+    },
+    "maxQueueSize": {
+      "@id": "amzn:maxQueueSize",
+      "@type": "xsd:string"
+    },
+    "maximumPerMinute": {
+      "@id": "amzn:maximumPerMinute",
+      "@type": "xsd:string"
+    },
+    "memory": {
+      "@id": "amzn:memory",
+      "@type": "xsd:string"
+    },
+    "memorySizeInKB": {
+      "@id": "amzn:memorySizeInKB",
+      "@type": "xsd:string"
+    },
+    "merge": {
+      "@id": "amzn:merge",
+      "@type": "xsd:string"
+    },
+    "message": {
+      "@id": "amzn:message",
+      "@type": "xsd:string"
+    },
+    "metadata": {
+      "@id": "amzn:metadata",
+      "@type": "xsd:string"
+    },
+    "minNumberOfExecutedThings": {
+      "@id": "amzn:minNumberOfExecutedThings",
+      "@type": "xsd:string"
+    },
+    "modifiedTimestamp": {
+      "@id": "amzn:modifiedTimestamp",
+      "@type": "xsd:string"
+    },
+    "mountROSysfs": {
+      "@id": "amzn:mountROSysfs",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "nextToken": {
+      "@id": "amzn:nextToken",
+      "@type": "xsd:string"
+    },
+    "numberOfNotifiedThings": {
+      "@id": "amzn:numberOfNotifiedThings",
+      "@type": "xsd:string"
+    },
+    "numberOfSucceededThings": {
+      "@id": "amzn:numberOfSucceededThings",
+      "@type": "xsd:string"
+    },
+    "parentTargetArn": {
+      "@id": "amzn:parentTargetArn",
+      "@type": "xsd:string"
+    },
+    "path": {
+      "@id": "amzn:path",
+      "@type": "xsd:string"
+    },
+    "permission": {
+      "@id": "amzn:permission",
+      "@type": "xsd:string"
+    },
+    "pinned": {
+      "@id": "amzn:pinned",
+      "@type": "xsd:string"
+    },
+    "platform": {
+      "@id": "amzn:platform",
+      "@type": "xsd:string"
+    },
+    "platforms": {
+      "@id": "amzn:platforms",
+      "@type": "xsd:string"
+    },
+    "portNumber": {
+      "@id": "amzn:portNumber",
+      "@type": "xsd:string"
+    },
+    "posixUser": {
+      "@id": "amzn:posixUser",
+      "@type": "xsd:string"
+    },
+    "preSignedUrl": {
+      "@id": "amzn:preSignedUrl",
+      "@type": "xsd:string"
+    },
+    "publisher": {
+      "@id": "amzn:publisher",
+      "@type": "xsd:string"
+    },
+    "rateIncreaseCriteria": {
+      "@id": "amzn:rateIncreaseCriteria",
+      "@type": "xsd:string"
+    },
+    "reason": {
+      "@id": "amzn:reason",
+      "@type": "xsd:string"
+    },
+    "recipe": {
+      "@id": "amzn:recipe",
+      "@type": "xsd:string"
+    },
+    "recipeOutputFormat": {
+      "@id": "amzn:recipeOutputFormat",
+      "@type": "xsd:string"
+    },
+    "reset": {
+      "@id": "amzn:reset",
+      "@type": "xsd:string"
+    },
+    "resolvedComponentVersions": {
+      "@id": "amzn:resolvedComponentVersions",
+      "@type": "xsd:string"
+    },
+    "revisionId": {
+      "@id": "amzn:revisionId",
+      "@type": "xsd:string"
+    },
+    "roleArn": {
+      "@id": "amzn:roleArn",
+      "@type": "xsd:string"
+    },
+    "runWith": {
+      "@id": "amzn:runWith",
+      "@type": "xsd:string"
+    },
+    "sourcePath": {
+      "@id": "amzn:sourcePath",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "amzn:status",
+      "@type": "xsd:string"
+    },
+    "statusDetails": {
+      "@id": "amzn:statusDetails",
+      "@type": "xsd:string"
+    },
+    "statusTimeoutInSeconds": {
+      "@id": "amzn:statusTimeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "systemResourceLimits": {
+      "@id": "amzn:systemResourceLimits",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "amzn:tags",
+      "@type": "xsd:string"
+    },
+    "targetArn": {
+      "@id": "amzn:targetArn",
+      "@type": "xsd:string"
+    },
+    "thingName": {
+      "@id": "amzn:thingName",
+      "@type": "xsd:string"
+    },
+    "thresholdPercentage": {
+      "@id": "amzn:thresholdPercentage",
+      "@type": "xsd:string"
+    },
+    "timeoutConfig": {
+      "@id": "amzn:timeoutConfig",
+      "@type": "xsd:string"
+    },
+    "timeoutInSeconds": {
+      "@id": "amzn:timeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "topic": {
+      "@id": "amzn:topic",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "amzn:type",
+      "@type": "xsd:string"
+    },
+    "vendorGuidance": {
+      "@id": "amzn:vendorGuidance",
+      "@type": "xsd:string"
+    },
+    "vendorGuidanceMessage": {
+      "@id": "amzn:vendorGuidanceMessage",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "amzn:version",
+      "@type": "xsd:string"
+    },
+    "versionRequirement": {
+      "@id": "amzn:versionRequirement",
+      "@type": "xsd:string"
+    },
+    "versionRequirements": {
+      "@id": "amzn:versionRequirements",
+      "@type": "xsd:string"
+    },
+    "volumes": {
+      "@id": "amzn:volumes",
+      "@type": "xsd:string"
+    },
+    "windowsUser": {
+      "@id": "amzn:windowsUser",
+      "@type": "xsd:string"
+    }
+  }
+}

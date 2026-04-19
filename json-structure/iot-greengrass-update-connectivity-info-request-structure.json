@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-update-connectivity-info-request-structure.json",
+  "name": "UpdateConnectivityInfoRequest",
+  "description": "UpdateConnectivityInfoRequest schema",
+  "type": "object",
+  "properties": {
+    "connectivityInfo": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/connectivityInfoList"
+        },
+        {
+          "xml": {
+            "name": "ConnectivityInfo"
+          },
+          "description": "The connectivity information for the core device."
+        }
+      ]
+    }
+  },
+  "required": [
+    "connectivityInfo"
+  ]
+}

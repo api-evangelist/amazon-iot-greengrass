@@ -1,0 +1,67 @@
+vocabulary: "1.0.0"
+info:
+  provider: Amazon IoT Greengrass
+  description: Vocabulary for Amazon IoT Greengrass covering all API resources and operations.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+operational:
+  apis:
+    - namespace: iot-greengrass
+      version: "2024-01-01"
+      baseUrl: https://greengrass.amazonaws.com
+      status: active
+  resources:
+    - name: resources
+      api: iot-greengrass
+      actions: [list, create, delete, get, update]
+  actions:
+    - name: list
+      methods: [GET]
+      pattern: read
+    - name: create
+      methods: [POST]
+      pattern: write
+    - name: get
+      methods: [GET]
+      pattern: read
+    - name: update
+      methods: [PUT, PATCH]
+      pattern: write
+    - name: delete
+      methods: [DELETE]
+      pattern: destructive
+  authentication:
+    schemes:
+      - type: AWS Signature Version 4
+        placement: header
+capability:
+  workflows:
+    - name: Edge Device Management
+      file: capabilities/edge-device-management.yaml
+      apis: [iot-greengrass]
+      toolCount: 8
+      personas: [IoT Developer, Edge Computing Engineer]
+  personas:
+    - id: primary-persona
+      name: IoT Developer
+      description: Manages Amazon IoT Greengrass resources and operations
+  domains:
+    - name: IoT
+      description: Extend AWS compute and services to edge devices.
+  namespaces:
+    - name: iot-greengrass
+      type: consumed
+    - name: edge-device-management-api
+      type: rest
+      port: 8080
+    - name: edge-device-management-mcp
+      type: mcp
+      port: 9090
+  binds:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+crossReference:
+  - resource: resources
+    operations: [listcomponents, createcomponentversion, listcoredevices, listdeployments]
+    workflows: [Edge Device Management]
+    personas: [IoT Developer, Edge Computing Engineer]

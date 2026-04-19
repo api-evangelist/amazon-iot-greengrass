@@ -1,0 +1,5 @@
+{
+  "baseRatePerMinute": "example-value",
+  "incrementFactor": "example-value",
+  "rateIncreaseCriteria": "example-value"
+}

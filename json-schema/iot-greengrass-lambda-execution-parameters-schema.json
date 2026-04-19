@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-schema/iot-greengrass-lambda-execution-parameters-schema.json",
+  "title": "LambdaExecutionParameters",
+  "description": "Contains parameters for a Lambda function that runs on IoT Greengrass.",
+  "type": "object",
+  "properties": {
+    "eventSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaEventSourceList"
+        },
+        {
+          "description": "The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it receives a message from an event source. You can subscribe this function to local publish/subscribe messages and Amazon Web Services IoT Core MQTT messages."
+        }
+      ]
+    },
+    "maxQueueSize": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message."
+        }
+      ]
+    },
+    "maxInstancesCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "The maximum number of instances that a non-pinned Lambda function can run at the same time."
+        }
+      ]
+    },
+    "maxIdleTimeInSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core software stops its process."
+        }
+      ]
+    },
+    "timeoutInSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "The maximum amount of time in seconds that the Lambda function can process a work item."
+        }
+      ]
+    },
+    "statusTimeoutInSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalInteger"
+        },
+        {
+          "description": "The interval in seconds at which a pinned (also known as long-lived) Lambda function component sends status updates to the Lambda manager component."
+        }
+      ]
+    },
+    "pinned": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OptionalBoolean"
+        },
+        {
+          "description": "<p>Whether or not the Lambda function is pinned, or long-lived.</p> <ul> <li> <p>A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.</p> </li> <li> <p>A non-pinned Lambda function starts only when it receives a work item and exists after it idles for <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software creates multiple instances of the function.</p> </li> </ul> <p>Default: <code>true</code> </p>"
+        }
+      ]
+    },
+    "inputPayloadEncodingType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaInputPayloadEncodingType"
+        },
+        {
+          "description": "<p>The encoding type that the Lambda function supports.</p> <p>Default: <code>json</code> </p>"
+        }
+      ]
+    },
+    "execArgs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaExecArgsList"
+        },
+        {
+          "description": "The list of arguments to pass to the Lambda function when it runs."
+        }
+      ]
+    },
+    "environmentVariables": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaEnvironmentVariables"
+        },
+        {
+          "description": "The map of environment variables that are available to the Lambda function when it runs."
+        }
+      ]
+    },
+    "linuxProcessParams": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LambdaLinuxProcessParams"
+        },
+        {
+          "description": "The parameters for the Linux process that contains the Lambda function."
+        }
+      ]
+    }
+  }
+}

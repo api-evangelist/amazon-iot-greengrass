@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-disassociate-client-device-from-core-device-entry-structure.json",
+  "name": "DisassociateClientDeviceFromCoreDeviceEntry",
+  "description": "Contains a request to disassociate a client device from a core device. The <a href=\"https://docs.aws.amazon.com/greengrass/v2/APIReference/API_BatchDisassociateClientDeviceWithCoreDevice.html\">BatchDisassociateClientDeviceWithCoreDevice</a> operation consumes a list of these requests.",
+  "type": "object",
+  "properties": {
+    "thingName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IoTThingName"
+        },
+        {
+          "description": "The name of the IoT thing that represents the client device to disassociate."
+        }
+      ]
+    }
+  },
+  "required": [
+    "thingName"
+  ]
+}

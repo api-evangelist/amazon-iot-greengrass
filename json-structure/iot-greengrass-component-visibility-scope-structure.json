@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/json-structure/iot-greengrass-component-visibility-scope-structure.json",
+  "name": "ComponentVisibilityScope",
+  "description": "ComponentVisibilityScope schema",
+  "type": "string",
+  "enum": [
+    "PRIVATE",
+    "PUBLIC"
+  ]
+}
