@@ -1,0 +1,13 @@
+{
+  "repo": "amazon-iot-greengrass",
+  "feeds": [
+    {
+      "source": "https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/",
+      "feed_url": "https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/feed/",
+      "saved": 10,
+      "title": "aws iot greengrass \u2013 The Internet of Things on AWS \u2013 Official Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:21:31Z"
+}
