@@ -1,0 +1,1350 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: AWS IoT Greengrass V2
+  description: 'AWS IoT Greengrass V2. 29 operations. Lead operation: Amazon IoT Greengrass Associate Service Role to Account.
+    Self-contained Naftiko capability covering one Amazon Iot Greengrass business surface.'
+  tags:
+  - Amazon Iot Greengrass
+  - AWS IoT Greengrass V2
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_IOT_GREENGRASS_API_KEY: AMAZON_IOT_GREENGRASS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-iot-greengrass
+    baseUri: http://greengrass.{region}.amazonaws.com
+    description: AWS IoT Greengrass V2 business capability. Self-contained, no shared references.
+    resources:
+    - name: greengrass-servicerole
+      path: /greengrass/servicerole
+      operations:
+      - name: associateserviceroletoaccount
+        method: PUT
+        description: Amazon IoT Greengrass Associate Service Role to Account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: disassociateservicerolefromaccount
+        method: DELETE
+        description: Amazon IoT Greengrass Disassociate Service Role from Account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getserviceroleforaccount
+        method: GET
+        description: Amazon IoT Greengrass Get Service Role for Account
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: greengrass-things-thingName-connectivityInfo
+      path: /greengrass/things/{thingName}/connectivityInfo
+      operations:
+      - name: getconnectivityinfo
+        method: GET
+        description: Amazon IoT Greengrass Get Connectivity Info
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: thingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+      - name: updateconnectivityinfo
+        method: PUT
+        description: Amazon IoT Greengrass Update Connectivity Info
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: thingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: greengrass-v2-components
+      path: /greengrass/v2/components
+      operations:
+      - name: listcomponents
+        method: GET
+        description: Amazon IoT Greengrass List Components
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: scope
+          in: query
+          type: string
+          description: '<p>The scope of the components to list.</p> <p>Default: <code>PRIVATE</code> </p>'
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-components-arn
+      path: /greengrass/v2/components/{arn}
+      operations:
+      - name: deletecomponent
+        method: DELETE
+        description: Amazon IoT Greengrass Delete Component
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the component version.
+          required: true
+      - name: getcomponent
+        method: GET
+        description: Amazon IoT Greengrass Get Component
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: recipeOutputFormat
+          in: query
+          type: string
+          description: The format of the recipe.
+        - name: arn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the component version.
+          required: true
+    - name: greengrass-v2-components-arn-artifacts-artifactName
+      path: /greengrass/v2/components/{arn}/artifacts/{artifactName}
+      operations:
+      - name: getcomponentversionartifact
+        method: GET
+        description: Amazon IoT Greengrass Get Component Version Artifact
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the component version. Specify the ARN of a public or a Lamb
+          required: true
+        - name: artifactName
+          in: path
+          type: string
+          description: <p>The name of the artifact.</p> <p>You can use the <a href="https://docs.aws.amazon.com/greengrass/v2/APIReference/API_GetComponent.html">GetComponent</a>
+            oper
+          required: true
+    - name: greengrass-v2-components-arn-metadata
+      path: /greengrass/v2/components/{arn}/metadata
+      operations:
+      - name: describecomponent
+        method: GET
+        description: Amazon IoT Greengrass Describe Component
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the component version.
+          required: true
+    - name: greengrass-v2-components-arn-versions
+      path: /greengrass/v2/components/{arn}/versions
+      operations:
+      - name: listcomponentversions
+        method: GET
+        description: Amazon IoT Greengrass List Component Versions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: arn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the component.
+          required: true
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-coreDevices
+      path: /greengrass/v2/coreDevices
+      operations:
+      - name: listcoredevices
+        method: GET
+        description: Amazon IoT Greengrass List Core Devices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: thingGroupArn
+          in: query
+          type: string
+          description: 'The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the IoT thing group by which to filter. If you specify this '
+        - name: status
+          in: query
+          type: string
+          description: <p>The core device status by which to filter. If you specify this parameter, the list includes only
+            core devices that have this status. Choose one of the follow
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-coreDevices-coreDeviceThingName
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}
+      operations:
+      - name: deletecoredevice
+        method: DELETE
+        description: Amazon IoT Greengrass Delete Core Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+      - name: getcoredevice
+        method: GET
+        description: Amazon IoT Greengrass Get Core Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+    - name: greengrass-v2-coreDevices-coreDeviceThingName-associateClientDevices
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}/associateClientDevices
+      operations:
+      - name: batchassociateclientdevicewithcoredevice
+        method: POST
+        description: Amazon IoT Greengrass Batch Associate Client Device with Core Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: greengrass-v2-coreDevices-coreDeviceThingName-associatedClientDevices
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}/associatedClientDevices
+      operations:
+      - name: listclientdevicesassociatedwithcoredevice
+        method: GET
+        description: Amazon IoT Greengrass List Client Devices Associated with Core Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-coreDevices-coreDeviceThingName-disassociateClientDevices
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}/disassociateClientDevices
+      operations:
+      - name: batchdisassociateclientdevicefromcoredevice
+        method: POST
+        description: Amazon IoT Greengrass Batch Disassociate Client Device from Core Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: greengrass-v2-coreDevices-coreDeviceThingName-effectiveDeployments
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}/effectiveDeployments
+      operations:
+      - name: listeffectivedeployments
+        method: GET
+        description: Amazon IoT Greengrass List Effective Deployments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-coreDevices-coreDeviceThingName-installedComponents
+      path: /greengrass/v2/coreDevices/{coreDeviceThingName}/installedComponents
+      operations:
+      - name: listinstalledcomponents
+        method: GET
+        description: Amazon IoT Greengrass List Installed Components
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: coreDeviceThingName
+          in: path
+          type: string
+          description: The name of the core device. This is also the name of the IoT thing.
+          required: true
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+        - name: topologyFilter
+          in: query
+          type: string
+          description: '<p>The filter for the list of components. Choose from the following options:</p> <ul> <li> <p> <code>ALL</code>
+            – The list includes all components installed on '
+    - name: greengrass-v2-createComponentVersion
+      path: /greengrass/v2/createComponentVersion
+      operations:
+      - name: createcomponentversion
+        method: POST
+        description: Amazon IoT Greengrass Create Component Version
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: greengrass-v2-deployments
+      path: /greengrass/v2/deployments
+      operations:
+      - name: createdeployment
+        method: POST
+        description: Amazon IoT Greengrass Create Deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: listdeployments
+        method: GET
+        description: Amazon IoT Greengrass List Deployments
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: targetArn
+          in: query
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the target IoT thing or thing group.
+        - name: historyFilter
+          in: query
+          type: string
+          description: <p>The filter for the list of deployments. Choose one of the following options:</p> <ul> <li> <p> <code>ALL</code>
+            – The list includes all deployments.</p> </li
+        - name: parentTargetArn
+          in: query
+          type: string
+          description: The parent deployment's target <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a>
+            within a subdeployment.
+        - name: maxResults
+          in: query
+          type: integer
+          description: The maximum number of results to be returned per paginated request.
+        - name: nextToken
+          in: query
+          type: string
+          description: The token to be used for the next set of paginated results.
+    - name: greengrass-v2-deployments-deploymentId
+      path: /greengrass/v2/deployments/{deploymentId}
+      operations:
+      - name: deletedeployment
+        method: DELETE
+        description: Amazon IoT Greengrass Delete Deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: deploymentId
+          in: path
+          type: string
+          description: The ID of the deployment.
+          required: true
+      - name: getdeployment
+        method: GET
+        description: Amazon IoT Greengrass Get Deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: deploymentId
+          in: path
+          type: string
+          description: The ID of the deployment.
+          required: true
+    - name: greengrass-v2-deployments-deploymentId-cancel
+      path: /greengrass/v2/deployments/{deploymentId}/cancel
+      operations:
+      - name: canceldeployment
+        method: POST
+        description: Amazon IoT Greengrass Cancel Deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: deploymentId
+          in: path
+          type: string
+          description: The ID of the deployment.
+          required: true
+    - name: greengrass-v2-resolveComponentCandidates
+      path: /greengrass/v2/resolveComponentCandidates
+      operations:
+      - name: resolvecomponentcandidates
+        method: POST
+        description: Amazon IoT Greengrass Resolve Component Candidates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: tags-resourceArn
+      path: /tags/{resourceArn}
+      operations:
+      - name: listtagsforresource
+        method: GET
+        description: Amazon IoT Greengrass List Tags for Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the resource.
+          required: true
+      - name: tagresource
+        method: POST
+        description: Amazon IoT Greengrass Tag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the resource to tag.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: tags-resourceArn}#tagKeys
+      path: /tags/{resourceArn}#tagKeys
+      operations:
+      - name: untagresource
+        method: DELETE
+        description: Amazon IoT Greengrass Untag Resource
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: resourceArn
+          in: path
+          type: string
+          description: The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of
+            the resource to untag.
+          required: true
+        - name: tagKeys
+          in: query
+          type: array
+          description: A list of keys for tags to remove from the resource.
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_IOT_GREENGRASS_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-iot-greengrass-rest
+    port: 8080
+    description: REST adapter for AWS IoT Greengrass V2. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/greengrass/servicerole
+      name: greengrass-servicerole
+      description: REST surface for greengrass-servicerole.
+      operations:
+      - method: PUT
+        name: associateserviceroletoaccount
+        description: Amazon IoT Greengrass Associate Service Role to Account
+        call: amazon-iot-greengrass.associateserviceroletoaccount
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: disassociateservicerolefromaccount
+        description: Amazon IoT Greengrass Disassociate Service Role from Account
+        call: amazon-iot-greengrass.disassociateservicerolefromaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getserviceroleforaccount
+        description: Amazon IoT Greengrass Get Service Role for Account
+        call: amazon-iot-greengrass.getserviceroleforaccount
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/things/{thingname}/connectivityinfo
+      name: greengrass-things-thingname-connectivityinfo
+      description: REST surface for greengrass-things-thingName-connectivityInfo.
+      operations:
+      - method: GET
+        name: getconnectivityinfo
+        description: Amazon IoT Greengrass Get Connectivity Info
+        call: amazon-iot-greengrass.getconnectivityinfo
+        with:
+          thingName: rest.thingName
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PUT
+        name: updateconnectivityinfo
+        description: Amazon IoT Greengrass Update Connectivity Info
+        call: amazon-iot-greengrass.updateconnectivityinfo
+        with:
+          thingName: rest.thingName
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/components
+      name: greengrass-v2-components
+      description: REST surface for greengrass-v2-components.
+      operations:
+      - method: GET
+        name: listcomponents
+        description: Amazon IoT Greengrass List Components
+        call: amazon-iot-greengrass.listcomponents
+        with:
+          scope: rest.scope
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/components/{arn}
+      name: greengrass-v2-components-arn
+      description: REST surface for greengrass-v2-components-arn.
+      operations:
+      - method: DELETE
+        name: deletecomponent
+        description: Amazon IoT Greengrass Delete Component
+        call: amazon-iot-greengrass.deletecomponent
+        with:
+          arn: rest.arn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getcomponent
+        description: Amazon IoT Greengrass Get Component
+        call: amazon-iot-greengrass.getcomponent
+        with:
+          recipeOutputFormat: rest.recipeOutputFormat
+          arn: rest.arn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/components/{arn}/artifacts/{artifactname}
+      name: greengrass-v2-components-arn-artifacts-artifactname
+      description: REST surface for greengrass-v2-components-arn-artifacts-artifactName.
+      operations:
+      - method: GET
+        name: getcomponentversionartifact
+        description: Amazon IoT Greengrass Get Component Version Artifact
+        call: amazon-iot-greengrass.getcomponentversionartifact
+        with:
+          arn: rest.arn
+          artifactName: rest.artifactName
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/components/{arn}/metadata
+      name: greengrass-v2-components-arn-metadata
+      description: REST surface for greengrass-v2-components-arn-metadata.
+      operations:
+      - method: GET
+        name: describecomponent
+        description: Amazon IoT Greengrass Describe Component
+        call: amazon-iot-greengrass.describecomponent
+        with:
+          arn: rest.arn
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/components/{arn}/versions
+      name: greengrass-v2-components-arn-versions
+      description: REST surface for greengrass-v2-components-arn-versions.
+      operations:
+      - method: GET
+        name: listcomponentversions
+        description: Amazon IoT Greengrass List Component Versions
+        call: amazon-iot-greengrass.listcomponentversions
+        with:
+          arn: rest.arn
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices
+      name: greengrass-v2-coredevices
+      description: REST surface for greengrass-v2-coreDevices.
+      operations:
+      - method: GET
+        name: listcoredevices
+        description: Amazon IoT Greengrass List Core Devices
+        call: amazon-iot-greengrass.listcoredevices
+        with:
+          thingGroupArn: rest.thingGroupArn
+          status: rest.status
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}
+      name: greengrass-v2-coredevices-coredevicethingname
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName.
+      operations:
+      - method: DELETE
+        name: deletecoredevice
+        description: Amazon IoT Greengrass Delete Core Device
+        call: amazon-iot-greengrass.deletecoredevice
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getcoredevice
+        description: Amazon IoT Greengrass Get Core Device
+        call: amazon-iot-greengrass.getcoredevice
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}/associateclientdevices
+      name: greengrass-v2-coredevices-coredevicethingname-associateclientdevices
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName-associateClientDevices.
+      operations:
+      - method: POST
+        name: batchassociateclientdevicewithcoredevice
+        description: Amazon IoT Greengrass Batch Associate Client Device with Core Device
+        call: amazon-iot-greengrass.batchassociateclientdevicewithcoredevice
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}/associatedclientdevices
+      name: greengrass-v2-coredevices-coredevicethingname-associatedclientdevices
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName-associatedClientDevices.
+      operations:
+      - method: GET
+        name: listclientdevicesassociatedwithcoredevice
+        description: Amazon IoT Greengrass List Client Devices Associated with Core Device
+        call: amazon-iot-greengrass.listclientdevicesassociatedwithcoredevice
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}/disassociateclientdevices
+      name: greengrass-v2-coredevices-coredevicethingname-disassociateclientdevices
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName-disassociateClientDevices.
+      operations:
+      - method: POST
+        name: batchdisassociateclientdevicefromcoredevice
+        description: Amazon IoT Greengrass Batch Disassociate Client Device from Core Device
+        call: amazon-iot-greengrass.batchdisassociateclientdevicefromcoredevice
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}/effectivedeployments
+      name: greengrass-v2-coredevices-coredevicethingname-effectivedeployments
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName-effectiveDeployments.
+      operations:
+      - method: GET
+        name: listeffectivedeployments
+        description: Amazon IoT Greengrass List Effective Deployments
+        call: amazon-iot-greengrass.listeffectivedeployments
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/coredevices/{coredevicethingname}/installedcomponents
+      name: greengrass-v2-coredevices-coredevicethingname-installedcomponents
+      description: REST surface for greengrass-v2-coreDevices-coreDeviceThingName-installedComponents.
+      operations:
+      - method: GET
+        name: listinstalledcomponents
+        description: Amazon IoT Greengrass List Installed Components
+        call: amazon-iot-greengrass.listinstalledcomponents
+        with:
+          coreDeviceThingName: rest.coreDeviceThingName
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+          topologyFilter: rest.topologyFilter
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/createcomponentversion
+      name: greengrass-v2-createcomponentversion
+      description: REST surface for greengrass-v2-createComponentVersion.
+      operations:
+      - method: POST
+        name: createcomponentversion
+        description: Amazon IoT Greengrass Create Component Version
+        call: amazon-iot-greengrass.createcomponentversion
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/deployments
+      name: greengrass-v2-deployments
+      description: REST surface for greengrass-v2-deployments.
+      operations:
+      - method: POST
+        name: createdeployment
+        description: Amazon IoT Greengrass Create Deployment
+        call: amazon-iot-greengrass.createdeployment
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: listdeployments
+        description: Amazon IoT Greengrass List Deployments
+        call: amazon-iot-greengrass.listdeployments
+        with:
+          targetArn: rest.targetArn
+          historyFilter: rest.historyFilter
+          parentTargetArn: rest.parentTargetArn
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/deployments/{deploymentid}
+      name: greengrass-v2-deployments-deploymentid
+      description: REST surface for greengrass-v2-deployments-deploymentId.
+      operations:
+      - method: DELETE
+        name: deletedeployment
+        description: Amazon IoT Greengrass Delete Deployment
+        call: amazon-iot-greengrass.deletedeployment
+        with:
+          deploymentId: rest.deploymentId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: GET
+        name: getdeployment
+        description: Amazon IoT Greengrass Get Deployment
+        call: amazon-iot-greengrass.getdeployment
+        with:
+          deploymentId: rest.deploymentId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/deployments/{deploymentid}/cancel
+      name: greengrass-v2-deployments-deploymentid-cancel
+      description: REST surface for greengrass-v2-deployments-deploymentId-cancel.
+      operations:
+      - method: POST
+        name: canceldeployment
+        description: Amazon IoT Greengrass Cancel Deployment
+        call: amazon-iot-greengrass.canceldeployment
+        with:
+          deploymentId: rest.deploymentId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/greengrass/v2/resolvecomponentcandidates
+      name: greengrass-v2-resolvecomponentcandidates
+      description: REST surface for greengrass-v2-resolveComponentCandidates.
+      operations:
+      - method: POST
+        name: resolvecomponentcandidates
+        description: Amazon IoT Greengrass Resolve Component Candidates
+        call: amazon-iot-greengrass.resolvecomponentcandidates
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tags/{resourcearn}
+      name: tags-resourcearn
+      description: REST surface for tags-resourceArn.
+      operations:
+      - method: GET
+        name: listtagsforresource
+        description: Amazon IoT Greengrass List Tags for Resource
+        call: amazon-iot-greengrass.listtagsforresource
+        with:
+          resourceArn: rest.resourceArn
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: tagresource
+        description: Amazon IoT Greengrass Tag Resource
+        call: amazon-iot-greengrass.tagresource
+        with:
+          resourceArn: rest.resourceArn
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/tags/resourcearn-tagkeys
+      name: tags-resourcearn-tagkeys
+      description: REST surface for tags-resourceArn}#tagKeys.
+      operations:
+      - method: DELETE
+        name: untagresource
+        description: Amazon IoT Greengrass Untag Resource
+        call: amazon-iot-greengrass.untagresource
+        with:
+          resourceArn: rest.resourceArn
+          tagKeys: rest.tagKeys
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-iot-greengrass-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for AWS IoT Greengrass V2. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: amazon-iot-greengrass-associate-service
+      description: Amazon IoT Greengrass Associate Service Role to Account
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.associateserviceroletoaccount
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-disassociate-service
+      description: Amazon IoT Greengrass Disassociate Service Role from Account
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-iot-greengrass.disassociateservicerolefromaccount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-service
+      description: Amazon IoT Greengrass Get Service Role for Account
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getserviceroleforaccount
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-connectivity
+      description: Amazon IoT Greengrass Get Connectivity Info
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getconnectivityinfo
+      with:
+        thingName: tools.thingName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-update-connectivity
+      description: Amazon IoT Greengrass Update Connectivity Info
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.updateconnectivityinfo
+      with:
+        thingName: tools.thingName
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-components
+      description: Amazon IoT Greengrass List Components
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listcomponents
+      with:
+        scope: tools.scope
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-delete-component
+      description: Amazon IoT Greengrass Delete Component
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-iot-greengrass.deletecomponent
+      with:
+        arn: tools.arn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-component
+      description: Amazon IoT Greengrass Get Component
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getcomponent
+      with:
+        recipeOutputFormat: tools.recipeOutputFormat
+        arn: tools.arn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-component-2
+      description: Amazon IoT Greengrass Get Component Version Artifact
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getcomponentversionartifact
+      with:
+        arn: tools.arn
+        artifactName: tools.artifactName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-describe-component
+      description: Amazon IoT Greengrass Describe Component
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.describecomponent
+      with:
+        arn: tools.arn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-component
+      description: Amazon IoT Greengrass List Component Versions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listcomponentversions
+      with:
+        arn: tools.arn
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-core
+      description: Amazon IoT Greengrass List Core Devices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listcoredevices
+      with:
+        thingGroupArn: tools.thingGroupArn
+        status: tools.status
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-delete-core
+      description: Amazon IoT Greengrass Delete Core Device
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-iot-greengrass.deletecoredevice
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-core
+      description: Amazon IoT Greengrass Get Core Device
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getcoredevice
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-batch-associate
+      description: Amazon IoT Greengrass Batch Associate Client Device with Core Device
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.batchassociateclientdevicewithcoredevice
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-client
+      description: Amazon IoT Greengrass List Client Devices Associated with Core Device
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listclientdevicesassociatedwithcoredevice
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-batch-disassociate
+      description: Amazon IoT Greengrass Batch Disassociate Client Device from Core Device
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.batchdisassociateclientdevicefromcoredevice
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-effective
+      description: Amazon IoT Greengrass List Effective Deployments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listeffectivedeployments
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-installed
+      description: Amazon IoT Greengrass List Installed Components
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listinstalledcomponents
+      with:
+        coreDeviceThingName: tools.coreDeviceThingName
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+        topologyFilter: tools.topologyFilter
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-create-component
+      description: Amazon IoT Greengrass Create Component Version
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.createcomponentversion
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-create-deployment
+      description: Amazon IoT Greengrass Create Deployment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.createdeployment
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-deployments
+      description: Amazon IoT Greengrass List Deployments
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listdeployments
+      with:
+        targetArn: tools.targetArn
+        historyFilter: tools.historyFilter
+        parentTargetArn: tools.parentTargetArn
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-delete-deployment
+      description: Amazon IoT Greengrass Delete Deployment
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-iot-greengrass.deletedeployment
+      with:
+        deploymentId: tools.deploymentId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-get-deployment
+      description: Amazon IoT Greengrass Get Deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.getdeployment
+      with:
+        deploymentId: tools.deploymentId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-cancel-deployment
+      description: Amazon IoT Greengrass Cancel Deployment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.canceldeployment
+      with:
+        deploymentId: tools.deploymentId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-resolve-component
+      description: Amazon IoT Greengrass Resolve Component Candidates
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.resolvecomponentcandidates
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-list-tags
+      description: Amazon IoT Greengrass List Tags for Resource
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-iot-greengrass.listtagsforresource
+      with:
+        resourceArn: tools.resourceArn
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-tag-resource
+      description: Amazon IoT Greengrass Tag Resource
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-iot-greengrass.tagresource
+      with:
+        resourceArn: tools.resourceArn
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-iot-greengrass-untag-resource
+      description: Amazon IoT Greengrass Untag Resource
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-iot-greengrass.untagresource
+      with:
+        resourceArn: tools.resourceArn
+        tagKeys: tools.tagKeys
+      outputParameters:
+      - type: object
+        mapping: $.
