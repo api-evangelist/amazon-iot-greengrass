@@ -2,12 +2,20 @@
   "repo": "amazon-iot-greengrass",
   "feeds": [
     {
-      "source": "https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/",
+      "source": "https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/feed/",
       "feed_url": "https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/feed/",
-      "title": "aws iot greengrass \u2013 The Internet of Things on AWS \u2013 Official Blog",
-      "saved": 15
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://aws.amazon.com/premiumsupport/",
+      "feed_url": "https://aws.amazon.com/premiumsupport/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 25,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
