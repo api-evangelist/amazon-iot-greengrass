@@ -41,6 +41,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-iot-greengrass.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-iot-greengrass-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-iot-greengrass-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-iot-greengrass-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-iot-greengrass-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/greengrass/
 - type: Website
