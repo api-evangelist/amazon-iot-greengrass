@@ -41,6 +41,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-iot-greengrass.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-iot-greengrass-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-iot-greengrass-trust-center.yml
 - type: VulnerabilityDisclosure
