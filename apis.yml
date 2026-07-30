@@ -4,7 +4,20 @@ description: AWS IoT Greengrass extends AWS compute, messaging, data management,
   devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable
   storage.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-iot-greengrass.png
 tags:
 - AWS
 - Edge Computing
@@ -17,21 +30,38 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-iot-greengrass:aws-iot-greengrass-api
-  name: AWS IoT Greengrass API
-  description: The AWS IoT Greengrass V2 API provides access to component management, core device management, and deployment
-    orchestration for edge computing workloads.
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-greengrass-api
+  name: Amazon IoT Greengrass Greengrass API
+  description: The Greengrass API from Amazon IoT Greengrass — 19 operation(s) for greengrass.
   humanURL: https://aws.amazon.com/greengrass/
   baseURL: https://greengrass.amazonaws.com
   tags:
-  - Edge Computing
-  - IoT
-  - Lambda
+  - Greengrass
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-greengrass-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/greengrass/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/greengrass/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-iot-greengrass.yaml
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-tags-api
+  name: Amazon IoT Greengrass Tags API
+  description: The Tags API from Amazon IoT Greengrass — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.amazonaws.com
+  tags:
+  - Tags
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-iot-greengrass-openapi-original.yml
+    url: openapi/amazon-iot-greengrass-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
   - type: GettingStarted
     url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
   - type: Pricing
@@ -41,6 +71,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-iot-greengrass.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-iot-greengrass/overview
 - type: AgenticAccess
   url: agentic-access/amazon-iot-greengrass-agentic-access.yml
 - type: TrustCenter
