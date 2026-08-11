@@ -48,8 +48,6 @@ apis:
     url: https://aws.amazon.com/greengrass/pricing/
   - type: FAQ
     url: https://aws.amazon.com/greengrass/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-iot-greengrass.yaml
 - aid: amazon-iot-greengrass:amazon-iot-greengrass-tags-api
   name: Amazon IoT Greengrass Tags API
   description: The Tags API from Amazon IoT Greengrass — 2 operation(s) for tags.
@@ -68,8 +66,6 @@ apis:
     url: https://aws.amazon.com/greengrass/pricing/
   - type: FAQ
     url: https://aws.amazon.com/greengrass/faqs/
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-iot-greengrass.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-iot-greengrass/overview
