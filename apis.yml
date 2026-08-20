@@ -23,6 +23,13 @@ tags:
 - Edge Computing
 - IoT
 - Lambda
+- Machine-Learning
+- Real-Time Processing
+tags_raw:
+- AWS
+- Edge Computing
+- IoT
+- Lambda
 - Machine Learning
 - Real-Time Processing
 url: https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml
