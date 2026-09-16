@@ -1,8 +1,8 @@
 aid: amazon-iot-greengrass
 name: Amazon IoT Greengrass
-description: AWS IoT Greengrass extends AWS compute, messaging, data management, sync, and ML inference capabilities to edge
-  devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable
-  storage.
+description: AWS IoT Greengrass extends AWS compute, messaging, data management, sync, and ML inference
+  capabilities to edge devices so they can act locally on the data they generate, while still using the
+  cloud for management, analytics, and durable storage.
 type: Index
 deliveryModel:
   model: saas
@@ -47,11 +47,11 @@ tags_raw:
 - Real-Time Processing
 url: https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: amazon-iot-greengrass:amazon-iot-greengrass-greengrass-api
-  name: Amazon IoT Greengrass Greengrass API
+  name: Amazon IoT Greengrass API
   description: The Greengrass API from Amazon IoT Greengrass — 19 operation(s) for greengrass.
   humanURL: https://aws.amazon.com/greengrass/
   baseURL: https://greengrass.amazonaws.com
