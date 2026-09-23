@@ -1,8 +1,7 @@
 {
   "provider": "amazon-iot-greengrass",
   "sources": [
-    "amazon-iot-greengrass-greengrass-api-openapi.yml",
-    "amazon-iot-greengrass-tags-api-openapi.yml"
+    "_original/amazon-iot-greengrass-openapi-original.yml"
   ],
   "outputs": [
     "amazon-iot-greengrass-greengrass-api-openapi.yml",
@@ -12,7 +11,43 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-iot-greengrass-openapi-original.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths PUT /greengrass/servicerole -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths DELETE /greengrass/servicerole -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/servicerole -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/coreDevices/{coreDeviceThingName}/associateClientDevices -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/coreDevices/{coreDeviceThingName}/disassociateClientDevices -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/deployments/{deploymentId}/cancel -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/createComponentVersion -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/deployments -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/deployments -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths DELETE /greengrass/v2/components/{arn} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/components/{arn} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths DELETE /greengrass/v2/coreDevices/{coreDeviceThingName} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/coreDevices/{coreDeviceThingName} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths DELETE /greengrass/v2/deployments/{deploymentId} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/deployments/{deploymentId} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/components/{arn}/metadata -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/components/{arn}/artifacts/{artifactName} -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/things/{thingName}/connectivityInfo -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths PUT /greengrass/things/{thingName}/connectivityInfo -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/coreDevices/{coreDeviceThingName}/associatedClientDevices -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/components/{arn}/versions -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/components -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/coreDevices -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/coreDevices/{coreDeviceThingName}/effectiveDeployments -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /greengrass/v2/coreDevices/{coreDeviceThingName}/installedComponents -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths GET /tags/{resourceArn} -> Tags",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /tags/{resourceArn} -> Tags",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths POST /greengrass/v2/resolveComponentCandidates -> Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: tagged paths DELETE /tags/{resourceArn}#tagKeys -> Tags",
+    "amazon-iot-greengrass-openapi-original.yml: declared missing tag: Greengrass",
+    "amazon-iot-greengrass-openapi-original.yml: declared missing tag: Tags",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-iot-greengrass-greengrass-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-iot-greengrass-tags-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

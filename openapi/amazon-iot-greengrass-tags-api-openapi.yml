@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2020-11-30'
   x-release: v4
-  title: AWS IoT V2 Greengrass Tags API
-  description: <p>IoT Greengrass brings local compute, messaging, data management, sync, and ML inference capabilities to edge devices. This enables devices to collect and analyze data closer to the source of information, react autonomously to local events, and communicate securely with each other on local networks. Local devices can also communicate securely with Amazon Web Services IoT Core and export IoT data to the Amazon Web Services Cloud. IoT Greengrass developers can use Lambda functions and components to create and deploy applications to fleets of edge devices for local operation.</p> <p>IoT Greengrass Version 2 provides a new major version of the IoT Greengrass Core software, new APIs, and a new console. Use this API reference to learn how to use the IoT Greengrass V2 API operations to manage components, manage deployments, and core devices.</p> <p>For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html">What is IoT Greengrass?</a> in the <i>IoT Greengrass V2 Developer Guide</i>.</p>
+  title: AWS IoT Greengrass V2 Tags API
+  description: IoT Greengrass brings local compute, messaging, data management, sync, and ML inference capabilities to edge devices.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/greengrassv2-2020-11-30.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -284,57 +285,9 @@ paths:
       tags:
       - Tags
 components:
-  schemas:
-    ValidationException: {}
-    TagMap:
-      type: object
-      minProperties: 1
-      maxProperties: 200
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ResourceNotFoundException: {}
-    InternalServerException: {}
-    ListTagsForResourceResponse:
-      type: object
-      properties:
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/TagMap'
-          - description: A list of key-value pairs that contain metadata for the resource. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    UntagResourceResponse:
-      type: object
-      properties: {}
-    TagResourceResponse:
-      type: object
-      properties: {}
-    TagValue:
-      type: string
-      maxLength: 256
   parameters:
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -345,18 +298,66 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    UntagResourceResponse:
+      type: object
+      properties: {}
+    TagResourceResponse:
+      type: object
+      properties: {}
+    ListTagsForResourceResponse:
+      type: object
+      properties:
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: A list of key-value pairs that contain metadata for the resource. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
+    InternalServerException: {}
+    TagMap:
+      type: object
+      minProperties: 1
+      maxProperties: 200
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    ResourceNotFoundException: {}
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    ValidationException: {}
+    TagValue:
+      type: string
+      maxLength: 256
   securitySchemes:
     hmac:
       type: apiKey
