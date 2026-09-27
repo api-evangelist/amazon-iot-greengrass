@@ -36,7 +36,7 @@ tags:
 - Edge Computing
 - IoT
 - Lambda
-- Machine-Learning
+- Machine Learning
 - Real-Time Processing
 tags_raw:
 - AWS
@@ -45,6 +45,7 @@ tags_raw:
 - Lambda
 - Machine Learning
 - Real-Time Processing
+- Machine-Learning
 url: https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml
 created: '2026-03-16'
 modified: '2026-09-16'
@@ -174,5 +175,5 @@ integrations:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product

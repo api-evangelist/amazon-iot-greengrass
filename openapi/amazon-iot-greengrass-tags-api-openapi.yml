@@ -285,39 +285,39 @@ paths:
       tags:
       - Tags
 components:
+  schemas:
+    TagMap:
+      type: object
+      minProperties: 1
+      maxProperties: 200
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
+    TagValue:
+      type: string
+      maxLength: 256
+    TagResourceResponse:
+      type: object
+      properties: {}
+    ValidationException: {}
+    UntagResourceResponse:
+      type: object
+      properties: {}
+    ResourceNotFoundException: {}
+    InternalServerException: {}
+    ListTagsForResourceResponse:
+      type: object
+      properties:
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: A list of key-value pairs that contain metadata for the resource. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
   parameters:
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -328,36 +328,36 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    UntagResourceResponse:
-      type: object
-      properties: {}
-    TagResourceResponse:
-      type: object
-      properties: {}
-    ListTagsForResourceResponse:
-      type: object
-      properties:
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/TagMap'
-          - description: A list of key-value pairs that contain metadata for the resource. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
-    InternalServerException: {}
-    TagMap:
-      type: object
-      minProperties: 1
-      maxProperties: 200
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ResourceNotFoundException: {}
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    ValidationException: {}
-    TagValue:
-      type: string
-      maxLength: 256
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey
