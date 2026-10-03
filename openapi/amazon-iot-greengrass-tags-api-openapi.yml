@@ -286,28 +286,28 @@ paths:
       - Tags
 components:
   schemas:
+    TagValue:
+      type: string
+      maxLength: 256
+    TagKey:
+      type: string
+      minLength: 1
+      maxLength: 128
     TagMap:
       type: object
       minProperties: 1
       maxProperties: 200
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
-    TagKey:
-      type: string
-      minLength: 1
-      maxLength: 128
-    TagValue:
-      type: string
-      maxLength: 256
+    InternalServerException: {}
+    ValidationException: {}
     TagResourceResponse:
       type: object
       properties: {}
-    ValidationException: {}
+    ResourceNotFoundException: {}
     UntagResourceResponse:
       type: object
       properties: {}
-    ResourceNotFoundException: {}
-    InternalServerException: {}
     ListTagsForResourceResponse:
       type: object
       properties:
@@ -316,6 +316,12 @@ components:
           - $ref: '#/components/schemas/TagMap'
           - description: A list of key-value pairs that contain metadata for the resource. For more information, see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
   parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
@@ -328,14 +334,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -346,8 +346,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
