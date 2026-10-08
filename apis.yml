@@ -88,6 +88,12 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/greengrass/faqs/
 common:
+- type: Pricing
+  url: https://aws.amazon.com/greengrass/pricing/
+- type: RateLimits
+  url: rate-limits/amazon-iot-greengrass-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-iot-greengrass-finops.yml
 - type: Plans
   url: plans/amazon-iot-greengrass-plans-pricing.yml
 - type: PostmanWorkspace
