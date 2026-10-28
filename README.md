@@ -1,4 +1,4 @@
-# Amazon IoT Greengrass (amazon-iot-greengrass)
+# Amazon IoT Greengrass
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,128 +66,240 @@
 
 AWS IoT Greengrass extends AWS compute, messaging, data management, sync, and ML inference capabilities to edge devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable storage.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml)
+**Areas:** AWS · Edge Computing · IoT · Lambda · Machine Learning · Real-Time Processing
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon IoT Greengrass on APIs.io
 
-## Tags:
+Everything profiled for Amazon IoT Greengrass is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-iot-greengrass/](https://apis.io/providers/amazon-iot-greengrass/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Edge Computing, IoT, Lambda, Machine Learning, Real-Time Processing
+### APIs (2)
 
-## Timestamps
+- [Amazon IoT Greengrass API](https://apis.io/apis/amazon-iot-greengrass/amazon-iot-greengrass-greengrass-api/) — The Greengrass API from Amazon IoT Greengrass — 19 operation(s) for greengrass.
+- [Amazon IoT Greengrass Tags API](https://apis.io/apis/amazon-iot-greengrass/amazon-iot-greengrass-tags-api/) — The Tags API from Amazon IoT Greengrass — 2 operation(s) for tags.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AWS IoT Greengrass API
-The AWS IoT Greengrass V2 API provides access to component management, core device management, and deployment orchestration for edge computing workloads.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/greengrass/](https://aws.amazon.com/greengrass/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Amazon Iot Greengrass Agentic Access](https://apis.io/agentic-access/amazon-iot-greengrass/amazon-iot-greengrass-agentic-access/)
 
- - Edge Computing, IoT, Lambda
+#### JSON Schema (146)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/greengrass/v2/APIReference/)
-- [OpenAPI](openapi/amazon-iot-greengrass-openapi-original.yml)
-- [GettingStarted](https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html)
-- [Pricing](https://aws.amazon.com/greengrass/pricing/)
-- [FAQ](https://aws.amazon.com/greengrass/faqs/)
+- [AssociateClientDeviceWithCoreDeviceEntry](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry/)
+- [AssociateClientDeviceWithCoreDeviceEntryList](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry-list/)
+- [AssociateClientDeviceWithCoreDeviceErrorEntry](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-entry/)
+- [AssociateClientDeviceWithCoreDeviceErrorList](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-list/)
+- [AssociateServiceRoleToAccountRequest](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-request/)
+- [AssociateServiceRoleToAccountResponse](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-response/)
+- [AssociatedClientDevice](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associated-client-device/)
+- [AssociatedClientDeviceList](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-associated-client-device-list/)
+- [BatchAssociateClientDeviceWithCoreDeviceRequest](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-request/)
+- [BatchAssociateClientDeviceWithCoreDeviceResponse](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-response/)
+- [BatchDisassociateClientDeviceFromCoreDeviceRequest](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-request/)
+- [BatchDisassociateClientDeviceFromCoreDeviceResponse](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-response/)
+- [CancelDeploymentRequest](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-cancel-deployment-request/)
+- [CancelDeploymentResponse](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-cancel-deployment-response/)
+- [CloudComponentState](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-cloud-component-state/)
+- [CloudComponentStatus](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-cloud-component-status/)
+- [Component](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component/)
+- [ComponentCandidate](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-candidate/)
+- [ComponentCandidateList](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-candidate-list/)
+- [ComponentConfigurationPathList](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-configuration-path-list/)
+- [ComponentConfigurationUpdate](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-configuration-update/)
+- [ComponentDependencyMap](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-dependency-map/)
+- [ComponentDependencyRequirement](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-dependency-requirement/)
+- [ComponentDependencyType](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-dependency-type/)
+- [ComponentDeploymentSpecification](https://apis.io/schemas/amazon-iot-greengrass/iot-greengrass-component-deployment-specification/)
+- …and 121 more published on APIs.io
 
-## Common Properties
+#### JSON Structure (146)
 
-- [Portal](https://aws.amazon.com/greengrass/)
+Data models expressed in JSON Structure.
+
+- [Iot Greengrass Associate Client Device With Core Device Entry List Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry-list-structure/)
+- [Iot Greengrass Associate Client Device With Core Device Entry Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry-structure/)
+- [Iot Greengrass Associate Client Device With Core Device Error Entry Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-entry-structure/)
+- [Iot Greengrass Associate Client Device With Core Device Error List Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-list-structure/)
+- [Iot Greengrass Associate Service Role To Account Request Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-request-structure/)
+- [Iot Greengrass Associate Service Role To Account Response Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-response-structure/)
+- [Iot Greengrass Associated Client Device List Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associated-client-device-list-structure/)
+- [Iot Greengrass Associated Client Device Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-associated-client-device-structure/)
+- [Iot Greengrass Batch Associate Client Device With Core Device Request Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-request-structure/)
+- [Iot Greengrass Batch Associate Client Device With Core Device Response Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-response-structure/)
+- [Iot Greengrass Batch Disassociate Client Device From Core Device Request Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-request-structure/)
+- [Iot Greengrass Batch Disassociate Client Device From Core Device Response Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-response-structure/)
+- [Iot Greengrass Cancel Deployment Request Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-cancel-deployment-request-structure/)
+- [Iot Greengrass Cancel Deployment Response Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-cancel-deployment-response-structure/)
+- [Iot Greengrass Cloud Component State Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-cloud-component-state-structure/)
+- [Iot Greengrass Cloud Component Status Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-cloud-component-status-structure/)
+- [Iot Greengrass Component Candidate List Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-candidate-list-structure/)
+- [Iot Greengrass Component Candidate Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-candidate-structure/)
+- [Iot Greengrass Component Configuration Path List Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-configuration-path-list-structure/)
+- [Iot Greengrass Component Configuration Update Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-configuration-update-structure/)
+- [Iot Greengrass Component Dependency Map Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-dependency-map-structure/)
+- [Iot Greengrass Component Dependency Requirement Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-dependency-requirement-structure/)
+- [Iot Greengrass Component Dependency Type Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-dependency-type-structure/)
+- [Iot Greengrass Component Deployment Specification Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-deployment-specification-structure/)
+- [Iot Greengrass Component Deployment Specifications Structure](https://apis.io/json-structure/amazon-iot-greengrass/iot-greengrass-component-deployment-specifications-structure/)
+- …and 121 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Iot Greengrass Context](https://apis.io/jsonld/amazon-iot-greengrass/amazon-iot-greengrass-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Iot Greengrass Vocabulary](https://apis.io/vocabularies/amazon-iot-greengrass/amazon-iot-greengrass-vocabulary/)
+
+#### Examples (127)
+
+Example requests and responses.
+
+- [Iot Greengrass Associate Client Device With Core Device Entry Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry-example/)
+- [Iot Greengrass Associate Client Device With Core Device Entry List Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-entry-list-example/)
+- [Iot Greengrass Associate Client Device With Core Device Error Entry Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-entry-example/)
+- [Iot Greengrass Associate Client Device With Core Device Error List Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-client-device-with-core-device-error-list-example/)
+- [Iot Greengrass Associate Service Role To Account Request Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-request-example/)
+- [Iot Greengrass Associate Service Role To Account Response Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associate-service-role-to-account-response-example/)
+- [Iot Greengrass Associated Client Device Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associated-client-device-example/)
+- [Iot Greengrass Associated Client Device List Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-associated-client-device-list-example/)
+- [Iot Greengrass Batch Associate Client Device With Core Device Request Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-request-example/)
+- [Iot Greengrass Batch Associate Client Device With Core Device Response Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-batch-associate-client-device-with-core-device-response-example/)
+- [Iot Greengrass Batch Disassociate Client Device From Core Device Request Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-request-example/)
+- [Iot Greengrass Batch Disassociate Client Device From Core Device Response Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-batch-disassociate-client-device-from-core-device-response-example/)
+- [Iot Greengrass Cancel Deployment Request Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-cancel-deployment-request-example/)
+- [Iot Greengrass Cancel Deployment Response Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-cancel-deployment-response-example/)
+- [Iot Greengrass Cloud Component Status Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-cloud-component-status-example/)
+- [Iot Greengrass Component Candidate Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-candidate-example/)
+- [Iot Greengrass Component Candidate List Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-candidate-list-example/)
+- [Iot Greengrass Component Configuration Path List Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-configuration-path-list-example/)
+- [Iot Greengrass Component Configuration Update Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-configuration-update-example/)
+- [Iot Greengrass Component Dependency Map Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-dependency-map-example/)
+- [Iot Greengrass Component Dependency Requirement Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-dependency-requirement-example/)
+- [Iot Greengrass Component Deployment Specification Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-deployment-specification-example/)
+- [Iot Greengrass Component Deployment Specifications Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-deployment-specifications-example/)
+- [Iot Greengrass Component Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-example/)
+- [Iot Greengrass Component Latest Version Example](https://apis.io/examples/amazon-iot-greengrass/iot-greengrass-component-latest-version-example/)
+- …and 102 more published on APIs.io
+
+#### Collections (4)
+
+Postman and Open Collection request collections.
+
+- [AWS IoT V2 Greengrass API](https://apis.io/collections/amazon-iot-greengrass/open-amazon-iot-greengrass-greengrass-api/)
+- [AWS IoT V2 Greengrass Tags API](https://apis.io/collections/amazon-iot-greengrass/open-amazon-iot-greengrass-tags-api/)
+- [AWS IoT V2 Greengrass API](https://apis.io/collections/amazon-iot-greengrass/postman-amazon-iot-greengrass-greengrass-api/)
+- [AWS IoT V2 Greengrass Tags API](https://apis.io/collections/amazon-iot-greengrass/postman-amazon-iot-greengrass-tags-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon IoT Greengrass — jsonschema rules](https://apis.io/rules/amazon-iot-greengrass/amazon-iot-greengrass-jsonschema-spectral-rules/)
+- [Amazon IoT Greengrass API Rules](https://apis.io/rules/amazon-iot-greengrass/amazon-iot-greengrass-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Iot Greengrass Authentication](https://apis.io/security/amazon-iot-greengrass/amazon-iot-greengrass-authentication/)
+- [Amazon Iot Greengrass Domain Security](https://apis.io/security/amazon-iot-greengrass/amazon-iot-greengrass-domain-security/)
+- [Amazon Iot Greengrass Trust Center](https://apis.io/security/amazon-iot-greengrass/amazon-iot-greengrass-trust-center/)
+- [Amazon Iot Greengrass Vulnerability Disclosure](https://apis.io/security/amazon-iot-greengrass/amazon-iot-greengrass-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Iot Greengrass Plans Pricing](https://apis.io/plans/amazon-iot-greengrass/amazon-iot-greengrass-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Iot Greengrass Rate Limits](https://apis.io/rate-limits/amazon-iot-greengrass/amazon-iot-greengrass-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Iot Greengrass Finops](https://apis.io/finops/amazon-iot-greengrass/amazon-iot-greengrass-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/greengrass/)
 - [Documentation](https://docs.aws.amazon.com/greengrass/v2/developerguide/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
+- [Pricing](https://aws.amazon.com/greengrass/pricing/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/iot/tag/aws-iot-greengrass/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/greengrass/)
-- [SignUp](https://portal.aws.amazon.com/billing/signup)
-- [Login](https://signin.aws.amazon.com/)
-- [StatusPage](https://health.aws.amazon.com/health/status)
-- [Contact](https://aws.amazon.com/contact-us/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Edge Computing | Run Lambda functions and containers on edge devices with local compute. |
-| Component System | Deploy reusable software components to edge devices from a component catalog. |
-| Local ML Inference | Run machine learning inference locally with SageMaker model deployment. |
-| Deployment Management | Deploy and update software components to thousands of edge devices. |
-| Local Messaging | Enable MQTT messaging between local IoT devices without cloud round-trips. |
+**Kin Score 57.7** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 59.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 58.3 |
+| Access clarity | 67.1 |
 
-| Name | Description |
-|------|-------------|
-| Industrial Edge Processing | Process sensor data locally to reduce latency and bandwidth. |
-| Edge ML Inference | Run computer vision and anomaly detection models at the edge. |
-| Offline Operation | Continue processing and storing data when disconnected from the cloud. |
+**Agent readiness 35.8** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | verified |
+| Error Semantics | verified |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| AWS Lambda | Run Lambda functions on edge devices for local processing. |
-| Amazon SageMaker | Deploy trained ML models to edge devices for local inference. |
-| AWS IoT Core | Syncs device state and routes messages between edge and cloud. |
+**Regulatory alignment 32.7** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-iot-greengrass/](https://apis.io/providers/amazon-iot-greengrass/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [AWS IoT Greengrass API](openapi/amazon-iot-greengrass-openapi-original.yml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon IoT Greengrass: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-146 schema files covering key resources and operations.
-
-### JSON Structure
-
-146 JSON Structure files converted from JSON Schema.
-
-### JSON-LD
-
-- [Amazon IoT Greengrass Context](json-ld/amazon-iot-greengrass-context.jsonld)
-
-### Examples
-
-146 example JSON files generated from schemas.
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Shared Per-API Definitions
-
-- [AWS IoT Greengrass API](capabilities/shared/iot-greengrass.yaml) — operations for amazon iot greengrass management
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Edge Device Management](capabilities/edge-device-management.yaml) | Amazon IoT Greengrass | 8 | IoT Developer, Edge Computing Engineer |
-
-## Vocabulary
-
-- [Amazon IoT Greengrass Vocabulary](vocabulary/amazon-iot-greengrass-vocabulary.yaml) — Unified taxonomy mapping resources, actions, workflows, and personas
-
-## Rules
-
-- [Amazon IoT Greengrass Spectral Rules](rules/amazon-iot-greengrass-spectral-rules.yml) — 14 rules across 6 categories enforcing Amazon IoT Greengrass API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-iot-greengrass/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
