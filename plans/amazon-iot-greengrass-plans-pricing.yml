@@ -2,6 +2,7 @@
 generated: '2026-10-07'
 method: searched
 source: https://aws.amazon.com/greengrass/pricing/
+name: Amazon IoT Greengrass API Plans
 sources:
 - https://aws.amazon.com/greengrass/pricing/
 provenance:
@@ -36,7 +37,7 @@ plans:
 rate_limit_statements:
 - AWS IoT Core has a limit of 50 subscriptions per connection
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - metered

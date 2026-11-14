@@ -5,8 +5,20 @@ artifacts:
   agentic-access/amazon-iot-greengrass-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-iot-greengrass-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-iot-greengrass-authentication.yml:
     method: derived
+    evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
+  cli/amazon-iot-greengrass-cli.yml:
+    method: searched
     evidence: declared in the artifact
   collections/amazon-iot-greengrass-greengrass-api.opencollection.json:
     method: derived
@@ -20,6 +32,24 @@ artifacts:
   collections/amazon-iot-greengrass-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-iot-greengrass-tags-api
+  compliance/amazon-iot-greengrass-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-iot-greengrass-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-iot-greengrass-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-iot-greengrass-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-iot-greengrass-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-iot-greengrass-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/iot-greengrass-associate-client-device-with-core-device-entry-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -464,6 +494,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-iot-greengrass-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -471,6 +504,114 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-ld/amazon-iot-greengrass-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-associate-role-to-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-associate-role-to-group-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-create-component-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-create-deployment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-create-group-certificate-authority-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-create-group-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-disassociate-role-from-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-disassociate-role-from-group-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-associated-role-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-associated-role-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-bulk-deployment-status-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-component-version-artifact-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-connector-definition-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-core-device-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-deployment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-deployment-status-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-deployment-status-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-device-definition-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-function-definition-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-group-certificate-authority-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-group-certificate-authority-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-group-certificate-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-logger-definition-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-get-subscription-definition-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-greengrass-list-tags-for-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-greengrass-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-greengrass-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-list-bulk-deployment-detailed-reports-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-list-bulk-deployment-detailed-reports-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-list-core-devices-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-list-tags-for-resource-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-reset-deployments-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-update-group-certificate-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-iot-greengrass-update-group-certificate-configuration-response-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/iot-greengrass-associate-client-device-with-core-device-entry-list-schema.json:
@@ -1352,7 +1493,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -1421,16 +1562,45 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-iot-greengrass-openapi-original.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-iot-greengrass-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-iot-greengrass-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-iot-greengrass-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-iot-greengrass-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
+  openapi/amazon-iot-greengrass-certificateauthorities-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-iot-greengrass-greengrass-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-iot-greengrass-operations-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-iot-greengrass-role-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-iot-greengrass-tags-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  openapi/amazon-iot-greengrass-versions-api-openapi.yml:
+    method: unknown
+    evidence: no authorship recorded
+  packages/amazon-iot-greengrass-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-iot-greengrass-patterns.yml:
     method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    evidence: declared in the artifact
   plans/amazon-iot-greengrass-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -1440,10 +1610,16 @@ artifacts:
   postman/amazon-iot-greengrass-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-iot-greengrass-tags-api
+  privacy/amazon-iot-greengrass-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-iot-greengrass-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-iot-greengrass-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-iot-greengrass-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-iot-greengrass-spectral-rules.yml:
@@ -1461,9 +1637,32 @@ artifacts:
   sla/amazon-iot-greengrass-sla.yml:
     method: generated
     evidence: declared in the artifact
+  smithy/greengrass-2017-06-07.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/greengrass/service/2017-06-07/greengrass-2017-06-07.json
+      (sha256 61ce1ab56cd3, fetched 2026-11-11T21:11:06+00:00)
   smithy/greengrassv2-2020-11-30.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/greengrassv2/service/2020-11-30/greengrassv2-2020-11-30.json
+      (sha256 e0c324d26e87, fetched 2026-11-11T21:11:05+00:00)
+  terms/amazon-iot-greengrass-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-iot-greengrass-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-iot-greengrass-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-iot-greengrass-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-iot-greengrass-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-iot-greengrass-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-iot-greengrass-well-known.yml:
     method: unknown
     evidence: no authorship recorded

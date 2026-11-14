@@ -1,9 +1,12 @@
 aid: amazon-iot-greengrass
+
 name: Amazon IoT Greengrass
-description: AWS IoT Greengrass extends AWS compute, messaging, data management, sync, and ML inference
-  capabilities to edge devices so they can act locally on the data they generate, while still using the
-  cloud for management, analytics, and durable storage.
+
+description: AWS IoT Greengrass extends AWS compute, messaging, data management, sync, and ML inference capabilities to edge devices so they can
+  act locally on the data they generate, while still using the cloud for management, analytics, and durable storage.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -16,6 +19,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -28,9 +32,10 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-iot-greengrass.png
+
 tags:
 - Amazon Web Services
 - Edge Computing
@@ -45,49 +50,73 @@ tags_raw:
 - Lambda
 - Machine Learning
 - Real-Time Processing
+
+tags_raw:
+- AWS
+- Edge Computing
+- IoT
+- Lambda
+- Machine Learning
+- Real-Time Processing
 - Machine-Learning
+
 url: https://raw.githubusercontent.com/api-evangelist/amazon-iot-greengrass/refs/heads/main/apis.yml
+
 created: '2026-03-16'
+
 modified: '2026-09-16'
+
 specificationVersion: '0.23'
-apis:
-- aid: amazon-iot-greengrass:amazon-iot-greengrass-greengrass-api
-  name: Amazon IoT Greengrass API
-  description: The Greengrass API from Amazon IoT Greengrass — 19 operation(s) for greengrass.
-  humanURL: https://aws.amazon.com/greengrass/
-  baseURL: https://greengrass.amazonaws.com
-  tags:
-  - Greengrass
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-iot-greengrass-greengrass-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
-  - type: GettingStarted
-    url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
-  - type: Pricing
-    url: https://aws.amazon.com/greengrass/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/greengrass/faqs/
-- aid: amazon-iot-greengrass:amazon-iot-greengrass-tags-api
-  name: Amazon IoT Greengrass Tags API
-  description: The Tags API from Amazon IoT Greengrass — 2 operation(s) for tags.
-  humanURL: https://aws.amazon.com/greengrass/
-  baseURL: https://greengrass.amazonaws.com
-  tags:
-  - Tags
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-iot-greengrass-tags-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
-  - type: GettingStarted
-    url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
-  - type: Pricing
-    url: https://aws.amazon.com/greengrass/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/greengrass/faqs/
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
 common:
+- type: Spectral
+  url: rules/amazon-iot-greengrass-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-iot-greengrass-rules.yml
+- type: Spectral
+  url: rules/amazon-iot-greengrass-jsonschema-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-iot-greengrass-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-iot-greengrass-data-model.yml
+- type: CLI
+  url: cli/amazon-iot-greengrass-cli.yml
+- type: Idempotency
+  url: conventions/amazon-iot-greengrass-conventions.yml
+- type: Conventions
+  url: conventions/amazon-iot-greengrass-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Deprecation
+  url: https://docs.aws.amazon.com/greengrass/v1/developerguide/maintenance-policy.html
+- type: Lifecycle
+  url: lifecycle/amazon-iot-greengrass-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-iot-greengrass-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-iot-greengrass-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-iot-greengrass-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-iot-greengrass-security.txt
+- type: WellKnown
+  url: well-known/amazon-iot-greengrass-well-known.yml
+- type: Hosts
+  url: hosts/amazon-iot-greengrass-hosts.yml
+- type: Vendors
+  url: vendors/amazon-iot-greengrass-vendors.yml
+- type: SDKs
+  url: packages/amazon-iot-greengrass-packages.yml
+- type: Packages
+  url: packages/amazon-iot-greengrass-packages.yml
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
 - type: Pricing
   url: https://aws.amazon.com/greengrass/pricing/
 - type: RateLimits
@@ -170,6 +199,167 @@ common:
     description: Syncs device state and routes messages between edge and cloud.
 - type: Integrations
   url: https://aws.amazon.com/marketplace
+- type: UsageTerms
+  url: terms/amazon-iot-greengrass-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-iot-greengrass-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-iot-greengrass-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-iot-greengrass-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-iot-greengrass-ai-preferences.yml
+
+apis:
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-greengrass-api
+  name: Amazon IoT Greengrass API
+  description: The Greengrass API from Amazon IoT Greengrass — 19 operation(s) for greengrass.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Greengrass
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-greengrass-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/greengrass/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/greengrass/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-deployment-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-create-deployment-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-core-device-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-component-version-artifact-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-list-core-devices-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-create-component-version-request-schema.json
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-tags-api
+  name: Amazon IoT Greengrass Tags API
+  description: The Tags API from Amazon IoT Greengrass — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/greengrass/v2/APIReference/
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html
+  - type: Pricing
+    url: https://aws.amazon.com/greengrass/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/greengrass/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-greengrass-untag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-list-tags-for-resource-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-greengrass-tag-resource-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-greengrass-list-tags-for-resource-request-schema.json
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-certificateauthorities-api
+  name: Amazon IoT Greengrass Iot Greengrass Certificateauthorities API
+  description: The Iot Greengrass Certificateauthorities API from Amazon IoT Greengrass — 3 operation(s) for iot greengrass certificateauthorities.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Iot Greengrass Certificateauthorities
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-certificateauthorities-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-group-certificate-configuration-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-update-group-certificate-configuration-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-group-certificate-authority-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-update-group-certificate-configuration-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-group-certificate-authority-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-create-group-certificate-authority-request-schema.json
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-operations-api
+  name: Amazon IoT Greengrass Iot Greengrass Operations API
+  description: The Iot Greengrass Operations API from Amazon IoT Greengrass — 6 operation(s) for iot greengrass operations.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Iot Greengrass Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-bulk-deployment-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-deployment-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-list-bulk-deployment-detailed-reports-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-list-bulk-deployment-detailed-reports-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-reset-deployments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-deployment-status-request-schema.json
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-role-api
+  name: Amazon IoT Greengrass Iot Greengrass Role API
+  description: The Iot Greengrass Role API from Amazon IoT Greengrass — 1 operation(s) for iot greengrass role.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Iot Greengrass Role
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-role-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-associate-role-to-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-associated-role-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-disassociate-role-from-group-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-associate-role-to-group-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-disassociate-role-from-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-associated-role-request-schema.json
+- aid: amazon-iot-greengrass:amazon-iot-greengrass-versions-api
+  name: Amazon IoT Greengrass Iot Greengrass Versions API
+  description: The Iot Greengrass Versions API from Amazon IoT Greengrass — 16 operation(s) for iot greengrass versions.
+  humanURL: https://aws.amazon.com/greengrass/
+  baseURL: https://greengrass.{region}.amazonaws.com
+  tags:
+  - Iot Greengrass Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-iot-greengrass-versions-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-create-group-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-subscription-definition-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-connector-definition-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-function-definition-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-device-definition-version-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-iot-greengrass-get-logger-definition-version-request-schema.json
+
 integrations:
 - name: Sign in
 - name: Agent Mode
@@ -180,8 +370,12 @@ integrations:
 - name: Become a Channel Partner
 - name: Sell in AWS Marketplace
 - name: Manage Your Account
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v6
